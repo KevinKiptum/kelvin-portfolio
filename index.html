@@ -1,0 +1,816 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kelvin Kiplagat Kitum — ICT graduate, web developer and IT enthusiast based in Eldoret, Kenya.">
+<meta name="theme-color" content="#11182b">
+<title>Kelvin Kiplagat | ICT Portfolio</title>
+<style>
+:root{
+  --primary:#6554e8;--secondary:#08a6c9;--dark:#11182b;--light:#f5f6fc;
+  --white:#fff;--text:#263044;--muted:#778096;--surface:#fff;--line:#e8eaf2;
+  --soft:#eceeff;--shadow:0 8px 28px #18213c12;
+}
+body.dark-mode{
+  --light:#101522;--white:#171f30;--text:#e8ebf5;--muted:#a6afc2;
+  --surface:#171f30;--line:#2c3548;--soft:#252343;--shadow:0 8px 28px #0005;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:Arial,sans-serif;background:var(--light);color:var(--text);line-height:1.65;transition:background .25s,color .25s}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+a{text-decoration:none}
+header{background:#11182b;color:white;padding:14px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;position:sticky;top:0;z-index:1000;box-shadow:0 3px 18px #0002}
+.logo{font-size:22px;font-weight:bold;letter-spacing:.5px}.logo span{color:#a99cff}
+nav{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+nav a{color:white;font-size:13px}nav a:hover{color:#b9adff}
+.theme-toggle{border:1px solid #ffffff55;background:#ffffff12;color:white;border-radius:8px;padding:7px 10px}
+.hero{min-height:570px;padding:100px 8%;display:flex;align-items:center;background:radial-gradient(circle,#ffffff16 1px,transparent 2px),linear-gradient(125deg,#11182b,#35307a,#6554e8);background-size:25px 25px,cover;color:white}
+.hero-content{max-width:780px}.hero h1{font-size:clamp(38px,6vw,67px);line-height:1.1}.hero h1 span{color:#b9adff}
+.hero h2{font-size:clamp(18px,2.5vw,25px);margin-top:12px}
+.hero p{margin:22px 0;font-size:18px;color:#e1e2f8}
+.btn{display:inline-block;padding:11px 19px;border:0;border-radius:8px;background:var(--primary);color:white;margin:5px 4px 5px 0;font-weight:bold;transition:transform .2s,opacity .2s}
+.btn:hover{opacity:.88;transform:translateY(-1px)}.btn-white{background:white;color:#5142c4}.btn-dark{background:var(--dark)}.btn-red{background:#d94343}.btn-green{background:#168b58}.btn-outline{background:transparent;border:1px solid var(--primary);color:var(--primary)}
+section{padding:75px 7%;scroll-margin-top:75px}.container{max-width:1150px;margin:auto}
+.section-title{text-align:center;margin-bottom:35px}.section-title h2{font-size:30px;color:var(--text)}.section-title p{color:var(--muted)}
+.about-grid,.two-col{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;align-items:center}
+.card,.profile-card,.project-card,.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:var(--shadow)}
+.profile-icon{width:130px;height:130px;border-radius:50%;background:linear-gradient(135deg,#6554e8,#08a6c9);display:grid;place-items:center;color:white;font-size:45px;font-weight:bold;margin:0 auto 20px;overflow:hidden}
+.profile-icon img{width:100%;height:100%;object-fit:cover}
+.profile-photo-tools{margin-top:12px}.profile-photo-tools input{font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card h3,.project-card h3{margin:10px 0;color:var(--text)}
+.project-card{transition:.3s}.project-card:hover{transform:translateY(-5px)}
+.project-icon{height:115px;background:var(--soft);display:grid;place-items:center;border-radius:10px;font-size:48px}
+.alt{background:color-mix(in srgb,var(--light) 70%,#6554e8 8%)}
+.skill{margin:18px 0}.skill-label{display:flex;justify-content:space-between;gap:10px}
+.progress{height:9px;background:var(--line);border-radius:20px;overflow:hidden}.progress div{height:100%;background:linear-gradient(90deg,#6554e8,#08a6c9)}
+input,textarea,select{width:100%;padding:12px;border:1px solid var(--line);border-radius:7px;margin:7px 0 14px;background:var(--surface);color:var(--text)}
+input:focus,textarea:focus,select:focus{outline:2px solid #6554e855;border-color:var(--primary)}
+label{font-weight:bold;font-size:14px}textarea{min-height:90px}
+.hidden{display:none!important}footer{background:#11182b;color:white;text-align:center;padding:35px 15px}
+footer a{color:#b9adff}.muted{color:var(--muted)}.small{font-size:13px}
+.badge{display:inline-block;padding:5px 10px;border-radius:20px;background:#efedff;color:#5745cb;font-size:12px;margin:3px}
+.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;margin:15px 0;background:var(--surface)}
+th,td{padding:12px;text-align:left;border-bottom:1px solid var(--line)}th{background:var(--soft)}
+.app-page{min-height:75vh;padding:45px 6%;background:var(--light)}
+.app-header{background:#11182b;color:white;padding:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;border-radius:12px;margin-bottom:25px}
+.stat{padding:20px;border-radius:12px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow)}
+.stat h2{color:var(--primary);font-size:30px}
+.car-image{height:145px;border-radius:9px;background:linear-gradient(135deg,#e6e9f8,#d4dcf5);display:grid;place-items:center;font-size:60px}
+.notice{background:#e9f8ef;color:#167a40;padding:12px;border-radius:8px;margin:12px 0}
+.error{background:#fff0f0;color:#b52b2b;padding:12px;border-radius:8px;margin:12px 0}
+#toast{position:fixed;bottom:20px;right:20px;background:#11182b;color:white;padding:13px 20px;border-radius:8px;display:none;z-index:2000;max-width:90%}
+.admin-nav{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0}
+.admin-nav button{padding:9px 14px;border:0;border-radius:6px;background:var(--soft);color:var(--text)}
+.floating-contact{position:fixed;right:18px;bottom:18px;z-index:1500;background:#168b58;color:white;border-radius:30px;padding:12px 17px;font-weight:bold;box-shadow:0 5px 20px #0003}
+.feature-note{padding:13px 15px;background:var(--soft);border-radius:9px;margin-top:14px;font-size:13px}
+footer p{margin:6px}
+@media(max-width:750px){
+ header{justify-content:center;padding:13px 4%}nav{justify-content:center;gap:10px}
+ nav a{font-size:12px}.hero{padding:75px 7%;min-height:470px}
+ .about-grid,.two-col{grid-template-columns:1fr}section{padding:55px 5%}.app-page{padding:25px 4%}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">KELVIN<span>.</span></div>
+ <nav aria-label="Main navigation">
+  <a href="#home">Home</a><a href="#about">About</a><a href="#education">Education</a>
+  <a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+  <a href="#services">Services</a><a href="#contact">Contact</a><a href="#admin">Admin</a>
+  <button class="theme-toggle" id="themeToggle" type="button" onclick="toggleTheme()">🌙 Theme</button>
+ </nav>
+</header>
+
+<main id="mainWebsite">
+<section class="hero" id="home">
+ <div class="hero-content">
+  <span class="badge" style="background:#ffffff22;color:white">WELCOME TO MY PORTFOLIO</span>
+  <h1>Hello, I'm <span>Kelvin Kiplagat</span></h1>
+  <h2>ICT Graduate | Web Developer | IT Enthusiast</h2>
+  <p id="heroText">Passionate about technology, software development and creating digital solutions that make work easier.</p>
+  <a href="#projects" class="btn btn-white">Explore My Projects</a>
+  <a href="#contact" class="btn">Contact Me</a>
+  <p class="small">Eldoret, Kenya</p>
+ </div>
+</section>
+
+<section id="about"><div class="container">
+ <div class="section-title"><h2>About Me</h2><p>Get to know me and my professional background.</p></div>
+ <div class="about-grid">
+  <div class="profile-card" style="text-align:center">
+   <div class="profile-icon" id="profilePreview">KK</div>
+   <h2>Kelvin Kiplagat Kitum</h2><p class="muted">ICT Graduate</p>
+   <p><span class="badge">Technology</span><span class="badge">Web Development</span></p>
+   <div class="profile-photo-tools">
+    <label for="profileUpload" class="small">Add your profile photo (optional)</label>
+    <input id="profileUpload" type="file" accept="image/*" onchange="uploadProfilePhoto(event)">
+   </div>
+  </div>
+  <div>
+   <h2>Who I Am</h2>
+   <p>I am an ICT graduate with an interest in information technology, computer systems, networking and web development. I enjoy solving problems through technology and developing practical digital solutions.</p><br>
+   <p>My goal is to continue growing professionally, gain more experience and contribute to organisations through my technical skills.</p>
+   <a href="#contact" class="btn">Let's Connect</a>
+  </div>
+ </div>
+</div></section>
+
+<section id="education" class="alt"><div class="container">
+ <div class="section-title"><h2>Education Background</h2><p>My academic journey.</p></div>
+ <div class="grid">
+  <div class="card"><h3>🎓 KEMU</h3><p><b>Information Technology</b></p><p>Completed: 2024</p></div>
+  <div class="card"><h3>📚 Kapsowar Boys High School</h3><p><b>Secondary Education</b></p><p>Started: 2019</p></div>
+  <div class="card"><h3>📚 Tobongon</h3><p><b>Primary Education</b></p><p>KCPE: 2015</p></div>
+ </div>
+</div></section>
+
+<section id="experience"><div class="container">
+ <div class="section-title"><h2>Work Experience</h2><p>My practical experience and professional exposure.</p></div>
+ <div class="grid">
+  <div class="card"><h3>KVDA Eldoret</h3><span class="badge">2023–2025</span><p><b>ICT Attachee / Intern</b></p><p>Practical ICT exposure, technical support and computer-related activities.</p></div>
+  <div class="card"><h3>Professional Development</h3><span class="badge">Ongoing</span><p><b>Independent ICT Projects</b></p><p>Developing practical web applications and improving technical knowledge.</p></div>
+ </div>
+</div></section>
+
+<section id="skills" class="alt"><div class="container">
+ <div class="section-title"><h2>Technical Skills</h2><p>Technologies and areas of interest.</p></div>
+ <div class="two-col">
+  <div>
+   <div class="skill"><div class="skill-label"><b>HTML</b><span>85%</span></div><div class="progress"><div style="width:85%"></div></div></div>
+   <div class="skill"><div class="skill-label"><b>CSS</b><span>80%</span></div><div class="progress"><div style="width:80%"></div></div></div>
+   <div class="skill"><div class="skill-label"><b>JavaScript</b><span>75%</span></div><div class="progress"><div style="width:75%"></div></div></div>
+   <div class="skill"><div class="skill-label"><b>Computer Maintenance</b><span>80%</span></div><div class="progress"><div style="width:80%"></div></div></div>
+  </div>
+  <div class="card"><h3>Other Competencies</h3>
+   <p>✓ Computer troubleshooting</p><p>✓ Networking fundamentals</p><p>✓ Software installation</p>
+   <p>✓ Microsoft Office</p><p>✓ IT technical support</p><p>✓ Database fundamentals</p><p>✓ Communication and teamwork</p>
+  </div>
+ </div>
+</div></section>
+
+<section id="projects"><div class="container">
+ <div class="section-title"><h2>My Projects</h2><p>Explore my practical software demonstrations.</p></div>
+ <input id="projectSearch" aria-label="Search projects" placeholder="Search projects..." oninput="filterProjects()">
+ <div class="grid" id="projectGrid">
+  <div class="project-card" data-project="school management student registration records"><div class="project-icon">🏫</div><h3>School Management System</h3><p>Manage students, registration, records and school statistics.</p><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span><br><button class="btn" onclick="openApp('school')">Open System</button></div>
+  <div class="project-card" data-project="online voting election candidates results"><div class="project-icon">🗳️</div><h3>Online Voting System</h3><p>Candidate registration, demo voting and election results.</p><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span><br><button class="btn" onclick="openApp('voting')">Open System</button></div>
+  <div class="project-card" data-project="drivenest motor cars vehicle catalogue shopping enquiry"><div class="project-icon">🚘</div><h3>DRIVENEST Motor Cars</h3><p>Explore vehicles, prices and a shopping enquiry cart.</p><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span><br><button class="btn" onclick="openApp('cars')">Open System</button></div>
+ </div>
+ <p id="noProjects" class="muted hidden">No matching projects found.</p>
+ <div class="feature-note">These are interactive front-end demonstrations. Their records are stored in your current browser, not in a shared online database.</div>
+</div></section>
+
+<section id="services" class="alt"><div class="container">
+ <div class="section-title"><h2>My Services</h2><p>Technology services and support.</p></div>
+ <div class="grid">
+  <div class="card"><h3>💻 Web Development</h3><p>Creating responsive websites and interfaces.</p></div>
+  <div class="card"><h3>🖥️ Computer Support</h3><p>Computer troubleshooting and software installation.</p></div>
+  <div class="card"><h3>🌐 Networking</h3><p>Basic network setup and technical assistance.</p></div>
+  <div class="card"><h3>📊 System Development</h3><p>Developing simple management and business systems.</p></div>
+ </div>
+</div></section>
+
+<section id="resume"><div class="container">
+ <div class="section-title"><h2>My Resume</h2><p>View or save my professional profile as a PDF.</p></div>
+ <div class="card" style="text-align:center">
+  <h2>Kelvin Kiplagat Kitum</h2><p>ICT Graduate | Web Development | IT Support</p><p>Eldoret, Kenya</p>
+  <p>Phone: +254721328063</p><p>Email: kevohkevz@gmail.com</p>
+  <button class="btn" onclick="downloadCV()">Print / Save CV as PDF</button>
+ </div>
+</div></section>
+
+<section id="contact" class="alt"><div class="container">
+ <div class="section-title"><h2>Contact Me</h2><p>Have an opportunity or project? Let's connect.</p></div>
+ <div class="two-col">
+  <div class="card"><h3>Get In Touch</h3><p>📞 +254 721 328 063</p><p>✉️ kevohkevz@gmail.com</p><p>📍 Eldoret, Kenya</p>
+   <a class="btn btn-green" href="tel:+254721328063">Call Me</a><a class="btn" href="mailto:kevohkevz@gmail.com">Email Me</a>
+   <a class="btn btn-green" href="https://wa.me/254721328063?text=Hello%20Kelvin%2C%20I%20visited%20your%20portfolio." target="_blank" rel="noopener">WhatsApp Me</a>
+  </div>
+  <div class="card"><h3>Send an Enquiry</h3>
+   <form onsubmit="sendEmail(event)">
+    <label>Your Name</label><input id="contactName" required maxlength="100" placeholder="Enter your name">
+    <label>Your Email</label><input id="contactEmail" type="email" required maxlength="150" placeholder="Enter email">
+    <label>Message</label><textarea id="contactMessage" required maxlength="2000" placeholder="Write your message"></textarea>
+    <button class="btn" type="submit">Send Message</button>
+   </form>
+   <p class="small muted">Your email app will open with the enquiry prepared. This static website does not send messages to a server.</p>
+  </div>
+ </div>
+</div></section>
+
+<section id="admin"><div class="container">
+ <div class="section-title"><h2>Administrator</h2><p>Manage selected portfolio information on this browser.</p></div>
+ <div class="card" id="adminLogin"><h3>Admin Login</h3><p class="muted small">Demo password: 1234. This browser-only demo login is not secure for a public website.</p>
+  <label>Enter Password</label><input type="password" id="adminPassword" placeholder="Admin password">
+  <button class="btn" onclick="loginAdmin()">Login</button><p id="loginError" class="error hidden">Incorrect password.</p>
+ </div>
+ <div class="card hidden" id="adminDashboard">
+  <h3>Admin Dashboard</h3>
+  <div class="grid" style="margin-top:15px">
+   <div class="stat"><h2>3</h2><p>Portfolio Projects</p></div>
+   <div class="stat"><h2 id="studentCount">0</h2><p>Demo Students</p></div>
+   <div class="stat"><h2 id="messageCount">0</h2><p>Enquiries saved on this browser</p></div>
+  </div>
+  <h3 style="margin-top:25px">Update Homepage Introduction</h3><textarea id="newIntro"></textarea>
+  <button class="btn" onclick="saveIntro()">Save Introduction</button>
+  <h3 style="margin-top:25px">Local Enquiry Log</h3><div id="adminMessages" class="table-wrap"></div>
+  <button class="btn btn-red" onclick="clearMessages()">Clear Local Enquiries</button>
+  <button class="btn btn-red" onclick="logoutAdmin()">Logout</button>
+  <p class="muted small">All admin changes and enquiry records are stored in this browser only. They are not synced to visitors or other devices.</p>
+ </div>
+</div></section>
+</main>
+
+<!-- SCHOOL MANAGEMENT SYSTEM -->
+<div id="schoolApp" class="app-page hidden"><div class="container">
+ <div class="app-header"><div><h2>🏫 School Management System</h2><p>Student administration dashboard</p></div><button class="btn btn-white" onclick="closeApp()">Back to Portfolio</button></div>
+ <div class="grid"><div class="stat"><h2 id="totalStudents">0</h2><p>Total Students</p></div><div class="stat"><h2 id="maleStudents">0</h2><p>Male Students</p></div><div class="stat"><h2 id="femaleStudents">0</h2><p>Female Students</p></div></div>
+ <div class="panel" style="margin-top:20px"><h3>Register New Student</h3><form onsubmit="addStudent(event)">
+  <div class="two-col">
+   <div><label>Full Name</label><input id="studentName" required maxlength="100" placeholder="Student name"></div>
+   <div><label>Admission Number</label><input id="admissionNo" required maxlength="30" placeholder="ADM001"></div>
+   <div><label>Gender</label><select id="studentGender" required><option value="">Select gender</option><option>Male</option><option>Female</option></select></div>
+   <div><label>Class</label><select id="studentClass"><option>Grade 1</option><option>Grade 2</option><option>Grade 3</option><option>Grade 4</option><option>Grade 5</option><option>Grade 6</option><option>Grade 7</option><option>Grade 8</option><option>Grade 9</option><option>Form 1</option><option>Form 2</option><option>Form 3</option><option>Form 4</option></select></div>
+  </div><button class="btn">Register Student</button>
+ </form></div>
+ <div class="panel" style="margin-top:20px"><h3>Student Records</h3><input id="studentSearch" placeholder="Search students..." oninput="renderStudents()">
+  <div class="table-wrap"><table><thead><tr><th>Name</th><th>Admission</th><th>Gender</th><th>Class</th><th>Action</th></tr></thead><tbody id="studentTable"></tbody></table></div>
+ </div>
+</div></div>
+
+<!-- ONLINE VOTING SYSTEM -->
+<div id="votingApp" class="app-page hidden"><div class="container">
+ <div class="app-header"><div><h2>🗳️ Online Voting System</h2><p>Election demonstration platform</p></div><button class="btn btn-white" onclick="closeApp()">Back to Portfolio</button></div>
+ <div class="notice">Demonstration only. This is not a secure or official election system.</div>
+ <div class="grid"><div class="stat"><h2 id="voteTotal">0</h2><p>Total Demo Votes</p></div><div class="stat"><h2 id="candidateTotal">3</h2><p>Candidates</p></div><div class="stat"><h2 id="voteStatus">Open</h2><p>Election Status</p></div></div>
+ <div class="panel" style="margin-top:20px"><h3>Voter Verification</h3><label>Enter your demo voter ID</label><input id="voterID" placeholder="Example: VOTER001"><p class="muted small">Each ID can vote once in this browser. This is not real identity verification.</p></div>
+ <div class="grid" id="candidateCards" style="margin-top:20px"></div>
+ <div class="panel" style="margin-top:20px"><h3>Election Results</h3><div id="results"></div><button class="btn" onclick="renderVoting()">Refresh Results</button></div>
+</div></div>
+
+<!-- DRIVENEST -->
+<div id="carsApp" class="app-page hidden"><div class="container">
+ <div class="app-header"><div><h2>🚘 DRIVENEST MOTOR CARS</h2><p>Find your next vehicle</p></div><button class="btn btn-white" onclick="closeApp()">Back to Portfolio</button></div>
+ <h2>Explore Our Vehicles</h2><p class="muted">Demo vehicle catalogue. Prices are illustrative, not live offers.</p>
+ <input id="carSearch" placeholder="Search vehicle..." oninput="renderCars()"><div class="grid" id="carList" style="margin-top:20px"></div>
+ <div class="panel" style="margin-top:25px"><h2>🛒 Enquiry Cart (<span id="cartCount">0</span>)</h2><div id="cartItems"></div><h3 id="cartTotal">Total: KSh 0</h3><button class="btn btn-green" onclick="sendCarEnquiry()">Send Vehicle Enquiry</button><button class="btn btn-red" onclick="clearCart()">Clear Cart</button></div>
+</div></div>
+
+<a class="floating-contact" href="https://wa.me/254721328063?text=Hello%20Kelvin%2C%20I%20visited%20your%20portfolio." target="_blank" rel="noopener">WhatsApp</a>
+<div id="toast" role="status" aria-live="polite"></div>
+<footer><h2>KELVIN KIPLAGAT</h2><p>ICT Graduate | Technology Enthusiast</p><p>Eldoret, Kenya</p><p>Phone: +254721328063</p><p>Email: kevohkevz@gmail.com</p><p>© <span id="year"></span> Kelvin Kiplagat. All Rights Reserved.</p></footer>
+
+<script>
+"use strict";
+const $=id=>document.getElementById(id);
+let toastTimer;
+
+function toast(message){
+ const t=$("toast");t.textContent=message;t.style.display="block";
+ clearTimeout(toastTimer);
+ toastTimer=setTimeout(()=>t.style.display="none",3000);
+}
+
+function getData(key,fallback){
+ try{
+  const value=localStorage.getItem(key);
+  return value?JSON.parse(value):fallback;
+ }catch(e){return fallback}
+}
+
+function saveData(key,value){
+ try{
+  localStorage.setItem(key,JSON.stringify(value));
+  return true;
+ }catch(e){
+  toast("Storage is full or unavailable in this browser.");
+  return false;
+ }
+}
+
+$("year").textContent=new Date().getFullYear();
+
+const savedIntro=localStorage.getItem("portfolioIntro");
+if(savedIntro)$("heroText").textContent=savedIntro;
+
+// Theme preference
+function applyTheme(theme){
+ document.body.classList.toggle("dark-mode",theme==="dark");
+ $("themeToggle").textContent=theme==="dark"?"☀️ Light":"🌙 Dark";
+}
+
+function toggleTheme(){
+ const next=document.body.classList.contains("dark-mode")?"light":"dark";
+ localStorage.setItem("portfolioTheme",next);
+ applyTheme(next);
+}
+
+applyTheme(localStorage.getItem("portfolioTheme")||"light");
+
+// Profile photo
+function uploadProfilePhoto(event){
+ const file=event.target.files&&event.target.files[0];
+ if(!file)return;
+
+ if(!file.type.startsWith("image/")){
+  toast("Please select an image file.");
+  return;
+ }
+
+ if(file.size>2*1024*1024){
+  toast("Choose an image smaller than 2 MB.");
+  return;
+ }
+
+ const reader=new FileReader();
+
+ reader.onload=()=>{
+  try{
+   localStorage.setItem("portfolioProfilePhoto",reader.result);
+   showProfilePhoto(reader.result);
+   toast("Profile photo updated on this browser.");
+  }catch(e){
+   toast("Image is too large for browser storage.");
+  }
+ };
+
+ reader.readAsDataURL(file);
+}
+
+function showProfilePhoto(src){
+ $("profilePreview").innerHTML="";
+ const img=document.createElement("img");
+ img.src=src;
+ img.alt="Kelvin Kiplagat profile photo";
+ $("profilePreview").appendChild(img);
+}
+
+const savedPhoto=localStorage.getItem("portfolioProfilePhoto");
+if(savedPhoto)showProfilePhoto(savedPhoto);
+
+// Project search
+function filterProjects(){
+ const q=$("projectSearch").value.trim().toLowerCase();
+ let visible=0;
+
+ document.querySelectorAll(".project-card").forEach(card=>{
+  const match=card.dataset.project.includes(q)||card.innerText.toLowerCase().includes(q);
+  card.classList.toggle("hidden",!match);
+  if(match)visible++;
+ });
+
+ $("noProjects").classList.toggle("hidden",visible>0);
+}
+
+// Open and close project systems
+function openApp(name){
+ ["mainWebsite","schoolApp","votingApp","carsApp"].forEach(id=>$(id).classList.add("hidden"));
+
+ const target=$(name+"App");
+
+ if(!target){
+  $("mainWebsite").classList.remove("hidden");
+  return;
+ }
+
+ target.classList.remove("hidden");
+ window.scrollTo(0,0);
+
+ if(name==="school")renderStudents();
+ if(name==="voting")renderVoting();
+
+ if(name==="cars"){
+  renderCars();
+  renderCart();
+ }
+}
+
+function closeApp(){
+ ["schoolApp","votingApp","carsApp"].forEach(id=>$(id).classList.add("hidden"));
+ $("mainWebsite").classList.remove("hidden");
+ window.scrollTo(0,0);
+}
+
+// Printable CV
+function downloadCV(){
+ const cvWindow=window.open("","_blank");
+
+ if(!cvWindow){
+  toast("Allow pop-ups to open the printable CV.");
+  return;
+ }
+
+ const cvHTML=`<!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>Kelvin Kiplagat Kitum - CV</title>
+ <style>
+ body{font-family:Arial,sans-serif;color:#20283a;line-height:1.55;max-width:800px;margin:35px auto;padding:0 25px}
+ h1{color:#4336a8;margin-bottom:3px}
+ h2{font-size:17px;color:#4336a8;border-bottom:1px solid #ddd;padding-bottom:4px;margin-top:22px}
+ .sub{color:#555}
+ p{margin:5px 0}
+ ul{margin-top:6px}
+ @media print{body{margin:12mm auto;padding:0}button{display:none}}
+ </style>
+ </head>
+ <body>
+ <h1>Kelvin Kiplagat Kitum</h1>
+ <p class="sub">ICT Graduate | Web Development | IT Support</p>
+ <p>Eldoret, Kenya | +254721328063 | kevohkevz@gmail.com</p>
+
+ <h2>PERSONAL PROFILE</h2>
+ <p>An ICT graduate interested in information technology, web development, computer systems and technical support. Keen to apply technical skills, solve problems and continue professional development.</p>
+
+ <h2>EDUCATION</h2>
+ <p><b>KEMU</b> — Information Technology, completed 2024.</p>
+ <p><b>Kapsowar Boys High School</b> — Secondary Education.</p>
+ <p><b>Tobongon</b> — Primary Education, KCPE 2015.</p>
+
+ <h2>EXPERIENCE</h2>
+ <p><b>KVDA Eldoret</b> — ICT Attachee / Intern (2023–2025).</p>
+ <p>Practical exposure to ICT support, troubleshooting and computer-related activities.</p>
+
+ <h2>TECHNICAL SKILLS</h2>
+ <ul>
+ <li>HTML, CSS and JavaScript</li>
+ <li>Computer troubleshooting and maintenance</li>
+ <li>Networking fundamentals</li>
+ <li>Software installation and Microsoft Office</li>
+ <li>Database fundamentals and IT technical support</li>
+ </ul>
+
+ <h2>REFERENCES</h2>
+ <p>Available upon request.</p>
+
+ <p style="margin-top:30px">
+ <button onclick="window.print()">Print / Save as PDF</button>
+ </p>
+ </body>
+ </html>`;
+
+ cvWindow.document.open();
+ cvWindow.document.write(cvHTML);
+ cvWindow.document.close();
+ cvWindow.focus();
+ setTimeout(()=>cvWindow.print(),500);
+}
+
+// Contact enquiries
+function sendEmail(e){
+ e.preventDefault();
+
+ const name=$("contactName").value.trim();
+ const email=$("contactEmail").value.trim();
+ const message=$("contactMessage").value.trim();
+
+ if(!name||!email||!message){
+  toast("Please complete all fields.");
+  return;
+ }
+
+ const entries=getData("localMessages",[]);
+
+ entries.unshift({
+  name,
+  email,
+  message,
+  date:new Date().toLocaleString()
+ });
+
+ saveData("localMessages",entries.slice(0,100));
+
+ const subject=encodeURIComponent("Website enquiry from "+name);
+ const body=encodeURIComponent(
+  "Name: "+name+"\nEmail: "+email+"\n\nMessage:\n"+message
+ );
+
+ window.location.href="mailto:kevohkevz@gmail.com?subject="+subject+"&body="+body;
+ toast("Enquiry prepared in your email app.");
+}
+
+// Admin dashboard
+function loginAdmin(){
+ if($("adminPassword").value==="1234"){
+  $("adminLogin").classList.add("hidden");
+  $("adminDashboard").classList.remove("hidden");
+  $("newIntro").value=$("heroText").textContent;
+  updateAdminStats();
+ }else{
+  $("loginError").classList.remove("hidden");
+ }
+}
+
+function logoutAdmin(){
+ $("adminDashboard").classList.add("hidden");
+ $("adminLogin").classList.remove("hidden");
+ $("adminPassword").value="";
+ $("loginError").classList.add("hidden");
+}
+
+function saveIntro(){
+ const value=$("newIntro").value.trim();
+
+ if(!value){
+  toast("Enter an introduction first.");
+  return;
+ }
+
+ localStorage.setItem("portfolioIntro",value);
+ $("heroText").textContent=value;
+ toast("Introduction updated successfully.");
+}
+
+function updateAdminStats(){
+ $("studentCount").textContent=getData("schoolStudents",[]).length;
+
+ const messages=getData("localMessages",[]);
+ $("messageCount").textContent=messages.length;
+
+ $("adminMessages").innerHTML=messages.length
+ ?`<table>
+ <thead><tr><th>Date</th><th>Name</th><th>Email</th><th>Message</th></tr></thead>
+ <tbody>
+ ${messages.map(m=>`
+ <tr>
+ <td>${escapeHTML(m.date)}</td>
+ <td>${escapeHTML(m.name)}</td>
+ <td>${escapeHTML(m.email)}</td>
+ <td>${escapeHTML(m.message)}</td>
+ </tr>`).join("")}
+ </tbody></table>`
+ :"<p class='muted'>No local enquiries have been recorded.</p>";
+}
+
+function clearMessages(){
+ if(!confirm("Clear all enquiries saved in this browser?"))return;
+
+ localStorage.removeItem("localMessages");
+ updateAdminStats();
+ toast("Local enquiry log cleared.");
+}
+
+// School Management System
+function addStudent(e){
+ e.preventDefault();
+
+ const student={
+  name:$("studentName").value.trim(),
+  admission:$("admissionNo").value.trim(),
+  gender:$("studentGender").value,
+  grade:$("studentClass").value
+ };
+
+ let students=getData("schoolStudents",[]);
+
+ if(students.some(s=>String(s.admission).toLowerCase()===student.admission.toLowerCase())){
+  toast("Admission number already exists.");
+  return;
+ }
+
+ students.push(student);
+
+ if(!saveData("schoolStudents",students))return;
+
+ e.target.reset();
+ renderStudents();
+ updateAdminStats();
+ toast("Student registered successfully.");
+}
+
+function deleteStudent(admission){
+ if(!confirm("Delete this student record?"))return;
+
+ let students=getData("schoolStudents",[]).filter(s=>s.admission!==admission);
+
+ saveData("schoolStudents",students);
+ renderStudents();
+ updateAdminStats();
+ toast("Student deleted.");
+}
+
+function renderStudents(){
+ const students=getData("schoolStudents",[]);
+ const search=($("studentSearch").value||"").toLowerCase();
+
+ const filtered=students.filter(s=>
+  s.name.toLowerCase().includes(search)||
+  s.admission.toLowerCase().includes(search)||
+  s.grade.toLowerCase().includes(search)
+ );
+
+ $("studentTable").innerHTML=filtered.map(s=>`
+ <tr>
+ <td>${escapeHTML(s.name)}</td>
+ <td>${escapeHTML(s.admission)}</td>
+ <td>${escapeHTML(s.gender)}</td>
+ <td>${escapeHTML(s.grade)}</td>
+ <td><button class="btn btn-red" onclick="deleteStudent('${escapeJS(s.admission)}')">Delete</button></td>
+ </tr>
+ `).join("")||'<tr><td colspan="5">No student records found.</td></tr>';
+
+ $("totalStudents").textContent=students.length;
+ $("maleStudents").textContent=students.filter(s=>s.gender==="Male").length;
+ $("femaleStudents").textContent=students.filter(s=>s.gender==="Female").length;
+}
+
+// Online Voting System — demonstration only
+const candidates=[
+ {id:"c1",name:"Candidate One",party:"Party A",symbol:"🔵"},
+ {id:"c2",name:"Candidate Two",party:"Party B",symbol:"🟢"},
+ {id:"c3",name:"Candidate Three",party:"Party C",symbol:"🟡"}
+];
+
+function getVotes(){return getData("demoVotes",{})}
+function getVoters(){return getData("demoVoters",[])}
+
+function castVote(candidateID){
+ const voter=$("voterID").value.trim();
+
+ if(!voter){
+  toast("Enter your demo voter ID.");
+  return;
+ }
+
+ let voters=getVoters();
+
+ if(voters.includes(voter.toLowerCase())){
+  toast("This demo voter ID has already voted.");
+  return;
+ }
+
+ if(!candidates.some(c=>c.id===candidateID)){
+  toast("Invalid candidate.");
+  return;
+ }
+
+ let votes=getVotes();
+ votes[candidateID]=(votes[candidateID]||0)+1;
+ voters.push(voter.toLowerCase());
+
+ if(!saveData("demoVotes",votes)||!saveData("demoVoters",voters))return;
+
+ $("voterID").value="";
+ renderVoting();
+ toast("Your demonstration vote has been recorded.");
+}
+
+function renderVoting(){
+ const votes=getVotes();
+ const total=Object.values(votes).reduce((a,b)=>a+b,0);
+
+ $("voteTotal").textContent=total;
+ $("candidateTotal").textContent=candidates.length;
+
+ $("candidateCards").innerHTML=candidates.map(c=>`
+ <div class="card" style="text-align:center">
+ <div style="font-size:45px">${c.symbol}</div>
+ <h3>${c.name}</h3>
+ <p>${c.party}</p>
+ <button class="btn" onclick="castVote('${c.id}')">Vote</button>
+ </div>
+ `).join("");
+
+ $("results").innerHTML=candidates.map(c=>{
+  const count=votes[c.id]||0;
+  const percent=total?Math.round(count/total*100):0;
+
+  return `
+  <div class="skill">
+  <div class="skill-label">
+  <b>${c.name}</b>
+  <span>${count} votes (${percent}%)</span>
+  </div>
+  <div class="progress">
+  <div style="width:${percent}%"></div>
+  </div>
+  </div>`;
+ }).join("");
+}
+
+// DRIVENEST Motor Cars
+const cars=[
+ {id:1,name:"Toyota Mark X",year:2007,price:800000,emoji:"🚘"},
+ {id:2,name:"Toyota Land Cruiser V8",year:2015,price:6500000,emoji:"🚙"},
+ {id:3,name:"Toyota Prado",year:2018,price:5200000,emoji:"🚙"},
+ {id:4,name:"Mazda CX-5",year:2017,price:2300000,emoji:"🚗"},
+ {id:5,name:"Toyota Fielder",year:2016,price:1200000,emoji:"🚘"},
+ {id:6,name:"Tesla Model S",year:2020,price:8500000,emoji:"🚗"}
+];
+
+function money(value){
+ return "KSh "+Number(value).toLocaleString("en-KE");
+}
+
+function renderCars(){
+ const search=($("carSearch").value||"").toLowerCase();
+
+ const filtered=cars.filter(car=>
+  car.name.toLowerCase().includes(search)||
+  String(car.year).includes(search)
+ );
+
+ $("carList").innerHTML=filtered.map(car=>`
+ <div class="card">
+ <div class="car-image">${car.emoji}</div>
+ <h3>${car.name}</h3>
+ <p>Year: ${car.year}</p>
+ <h3 style="color:#6554e8">${money(car.price)}</h3>
+ <button class="btn" onclick="addToCart(${car.id})">Add to Enquiry Cart</button>
+ </div>
+ `).join("")||"<p>No vehicles found.</p>";
+}
+
+function getCart(){return getData("drivenestCart",[])}
+
+function addToCart(id){
+ const car=cars.find(c=>c.id===id);
+ if(!car)return;
+
+ const cart=getCart();
+ cart.push(car.id);
+
+ saveData("drivenestCart",cart);
+ renderCart();
+ toast(car.name+" added to enquiry cart.");
+}
+
+function renderCart(){
+ const cart=getCart();
+ const items=cart.map(id=>cars.find(c=>c.id===id)).filter(Boolean);
+ const total=items.reduce((sum,car)=>sum+car.price,0);
+
+ $("cartCount").textContent=items.length;
+ $("cartTotal").textContent="Total: "+money(total);
+
+ $("cartItems").innerHTML=items.map((car,index)=>`
+ <p style="padding:9px;border-bottom:1px solid var(--line)">
+ ${car.emoji} ${car.name} — ${money(car.price)}
+ <button class="btn btn-red" onclick="removeCartItem(${index})">Remove</button>
+ </p>
+ `).join("")||"<p>Your enquiry cart is empty.</p>";
+}
+
+function removeCartItem(index){
+ const cart=getCart();
+ cart.splice(index,1);
+ saveData("drivenestCart",cart);
+ renderCart();
+}
+
+function clearCart(){
+ saveData("drivenestCart",[]);
+ renderCart();
+ toast("Cart cleared.");
+}
+
+function sendCarEnquiry(){
+ const cart=getCart();
+
+ if(!cart.length){
+  toast("Add a vehicle first.");
+  return;
+ }
+
+ const selected=cart.map(id=>cars.find(c=>c.id===id)).filter(Boolean);
+
+ const body=encodeURIComponent(
+  "Hello DRIVENEST,\nI am interested in these vehicles:\n"+
+  selected.map(c=>c.name+" - "+money(c.price)).join("\n")
+ );
+
+ window.location.href=
+ "mailto:kevohkevz@gmail.com?subject=DRIVENEST%20Vehicle%20Enquiry&body="+body;
+}
+
+// Safe display helpers
+function escapeHTML(value){
+ return String(value).replace(/[&<>"']/g,ch=>({
+  "&":"&amp;",
+  "<":"&lt;",
+  ">":"&gt;",
+  '"':"&quot;",
+  "'":"&#39;"
+ }[ch]));
+}
+
+function escapeJS(value){
+ return String(value).replace(/\\/g,"\\\\").replace(/'/g,"\\'");
+}
+
+// Initial setup
+renderStudents();
+updateAdminStats();
+</script>
+</body>
+</html>
