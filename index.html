@@ -4,813 +4,627 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Kelvin Kiplagat Kitum — ICT graduate, web developer and IT enthusiast based in Eldoret, Kenya.">
-<meta name="theme-color" content="#11182b">
-<title>Kelvin Kiplagat | ICT Portfolio</title>
+<meta name="description" content="Kelvin Kiplagat Kitum - ICT Graduate, Web Developer and IT Support">
+<title>Kelvin Kiplagat | Professional ICT Portfolio</title>
 <style>
-:root{
-  --primary:#6554e8;--secondary:#08a6c9;--dark:#11182b;--light:#f5f6fc;
-  --white:#fff;--text:#263044;--muted:#778096;--surface:#fff;--line:#e8eaf2;
-  --soft:#eceeff;--shadow:0 8px 28px #18213c12;
-}
-body.dark-mode{
-  --light:#101522;--white:#171f30;--text:#e8ebf5;--muted:#a6afc2;
-  --surface:#171f30;--line:#2c3548;--soft:#252343;--shadow:0 8px 28px #0005;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{font-family:Arial,sans-serif;background:var(--light);color:var(--text);line-height:1.65;transition:background .25s,color .25s}
+:root{--bg:#f3f5fa;--card:#fff;--text:#172033;--muted:#718096;--primary:#625bd8;--line:#e2e8f0;--nav:#111827}
+*{box-sizing:border-box}
+body{margin:0;font:15px Arial,sans-serif;background:var(--bg);color:var(--text)}
+body.dark{--bg:#101827;--card:#1c293b;--text:#f3f5fa;--muted:#aab6c8;--line:#334155}
 button,input,textarea,select{font:inherit}
 button{cursor:pointer}
-a{text-decoration:none}
-header{background:#11182b;color:white;padding:14px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;position:sticky;top:0;z-index:1000;box-shadow:0 3px 18px #0002}
-.logo{font-size:22px;font-weight:bold;letter-spacing:.5px}.logo span{color:#a99cff}
-nav{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-nav a{color:white;font-size:13px}nav a:hover{color:#b9adff}
-.theme-toggle{border:1px solid #ffffff55;background:#ffffff12;color:white;border-radius:8px;padding:7px 10px}
-.hero{min-height:570px;padding:100px 8%;display:flex;align-items:center;background:radial-gradient(circle,#ffffff16 1px,transparent 2px),linear-gradient(125deg,#11182b,#35307a,#6554e8);background-size:25px 25px,cover;color:white}
-.hero-content{max-width:780px}.hero h1{font-size:clamp(38px,6vw,67px);line-height:1.1}.hero h1 span{color:#b9adff}
-.hero h2{font-size:clamp(18px,2.5vw,25px);margin-top:12px}
-.hero p{margin:22px 0;font-size:18px;color:#e1e2f8}
-.btn{display:inline-block;padding:11px 19px;border:0;border-radius:8px;background:var(--primary);color:white;margin:5px 4px 5px 0;font-weight:bold;transition:transform .2s,opacity .2s}
-.btn:hover{opacity:.88;transform:translateY(-1px)}.btn-white{background:white;color:#5142c4}.btn-dark{background:var(--dark)}.btn-red{background:#d94343}.btn-green{background:#168b58}.btn-outline{background:transparent;border:1px solid var(--primary);color:var(--primary)}
-section{padding:75px 7%;scroll-margin-top:75px}.container{max-width:1150px;margin:auto}
-.section-title{text-align:center;margin-bottom:35px}.section-title h2{font-size:30px;color:var(--text)}.section-title p{color:var(--muted)}
-.about-grid,.two-col{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;align-items:center}
-.card,.profile-card,.project-card,.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:var(--shadow)}
-.profile-icon{width:130px;height:130px;border-radius:50%;background:linear-gradient(135deg,#6554e8,#08a6c9);display:grid;place-items:center;color:white;font-size:45px;font-weight:bold;margin:0 auto 20px;overflow:hidden}
-.profile-icon img{width:100%;height:100%;object-fit:cover}
-.profile-photo-tools{margin-top:12px}.profile-photo-tools input{font-size:12px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card h3,.project-card h3{margin:10px 0;color:var(--text)}
-.project-card{transition:.3s}.project-card:hover{transform:translateY(-5px)}
-.project-icon{height:115px;background:var(--soft);display:grid;place-items:center;border-radius:10px;font-size:48px}
-.alt{background:color-mix(in srgb,var(--light) 70%,#6554e8 8%)}
-.skill{margin:18px 0}.skill-label{display:flex;justify-content:space-between;gap:10px}
-.progress{height:9px;background:var(--line);border-radius:20px;overflow:hidden}.progress div{height:100%;background:linear-gradient(90deg,#6554e8,#08a6c9)}
-input,textarea,select{width:100%;padding:12px;border:1px solid var(--line);border-radius:7px;margin:7px 0 14px;background:var(--surface);color:var(--text)}
-input:focus,textarea:focus,select:focus{outline:2px solid #6554e855;border-color:var(--primary)}
-label{font-weight:bold;font-size:14px}textarea{min-height:90px}
-.hidden{display:none!important}footer{background:#11182b;color:white;text-align:center;padding:35px 15px}
-footer a{color:#b9adff}.muted{color:var(--muted)}.small{font-size:13px}
-.badge{display:inline-block;padding:5px 10px;border-radius:20px;background:#efedff;color:#5745cb;font-size:12px;margin:3px}
-.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;margin:15px 0;background:var(--surface)}
-th,td{padding:12px;text-align:left;border-bottom:1px solid var(--line)}th{background:var(--soft)}
-.app-page{min-height:75vh;padding:45px 6%;background:var(--light)}
-.app-header{background:#11182b;color:white;padding:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;border-radius:12px;margin-bottom:25px}
-.stat{padding:20px;border-radius:12px;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow)}
-.stat h2{color:var(--primary);font-size:30px}
-.car-image{height:145px;border-radius:9px;background:linear-gradient(135deg,#e6e9f8,#d4dcf5);display:grid;place-items:center;font-size:60px}
-.notice{background:#e9f8ef;color:#167a40;padding:12px;border-radius:8px;margin:12px 0}
-.error{background:#fff0f0;color:#b52b2b;padding:12px;border-radius:8px;margin:12px 0}
-#toast{position:fixed;bottom:20px;right:20px;background:#11182b;color:white;padding:13px 20px;border-radius:8px;display:none;z-index:2000;max-width:90%}
-.admin-nav{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0}
-.admin-nav button{padding:9px 14px;border:0;border-radius:6px;background:var(--soft);color:var(--text)}
-.floating-contact{position:fixed;right:18px;bottom:18px;z-index:1500;background:#168b58;color:white;border-radius:30px;padding:12px 17px;font-weight:bold;box-shadow:0 5px 20px #0003}
-.feature-note{padding:13px 15px;background:var(--soft);border-radius:9px;margin-top:14px;font-size:13px}
-footer p{margin:6px}
-@media(max-width:750px){
- header{justify-content:center;padding:13px 4%}nav{justify-content:center;gap:10px}
- nav a{font-size:12px}.hero{padding:75px 7%;min-height:470px}
- .about-grid,.two-col{grid-template-columns:1fr}section{padding:55px 5%}.app-page{padding:25px 4%}
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+.hidden{display:none!important}
+header{background:var(--nav);color:white;padding:17px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;position:sticky;top:0;z-index:10}
+.brand{font-weight:bold;font-size:19px;letter-spacing:1px}
+.brand span{color:#a9a2ff}
+.btn{border:0;border-radius:7px;padding:10px 14px;background:var(--primary);color:white;font-weight:bold;margin:3px}
+.btn.secondary{background:#e9e8ff;color:#39358c}
+.btn.danger{background:#c43d4b;color:white}
+.btn.dark{background:#28344c;color:white}
+.container{max-width:1200px;margin:auto;padding:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+h1,h2,h3{margin-top:0}
+.muted,small{color:var(--muted)}
+input,textarea,select{width:100%;padding:11px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--text);margin:5px 0 12px}
+textarea{min-height:90px}
+label{font-size:13px;font-weight:bold}
+.stat strong{display:block;font-size:28px;margin-top:8px}
+.stat small{font-size:12px}
+.item{padding:12px;background:var(--bg);border:1px solid var(--line);border-radius:8px;margin:9px 0}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+table{width:100%;border-collapse:collapse;min-width:550px}
+th,td{text-align:left;padding:11px;border-bottom:1px solid var(--line);font-size:13px}
+th{background:var(--bg)}
+.tablewrap{overflow:auto}
+.progress{height:8px;background:var(--line);border-radius:10px;margin:8px 0 15px}
+.progress span{display:block;height:100%;background:var(--primary)}
+.login{min-height:85vh;display:grid;place-items:center;padding:20px}
+.loginbox{background:white;color:#172033;padding:28px;border-radius:14px;width:min(400px,100%)}
+.dashboard{display:grid;grid-template-columns:230px 1fr;min-height:90vh}
+aside{background:var(--nav);padding:16px;color:white}
+aside button{display:block;width:100%;text-align:left;background:none;color:white;border:0;padding:12px;border-radius:7px}
+aside button:hover,aside button.active{background:#ffffff22}
+main{padding:22px;min-width:0}
+.hero{background:linear-gradient(120deg,#111827,#393078,#625bd8);color:white;padding:45px 30px;border-radius:16px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.hero h1{font-size:clamp(30px,5vw,50px);margin-bottom:8px}
+.hero p{color:#e2e3fa}
+.avatar{width:145px;height:145px;object-fit:cover;border-radius:50%;border:4px solid white;background:#ddd}
+section{scroll-margin-top:90px;margin:25px 0}
+nav a{color:white;text-decoration:none;margin:8px;display:inline-block;font-size:13px}
+footer{background:#111827;color:white;text-align:center;padding:25px}
+#toast{position:fixed;bottom:15px;right:15px;background:#172033;color:white;padding:14px;border-radius:8px;display:none;z-index:30}
+@media(max-width:800px){.dashboard{grid-template-columns:1fr}.grid4{grid-template-columns:repeat(2,1fr)}aside{display:grid;grid-template-columns:repeat(2,1fr)}main{padding:12px}}
+@media(max-width:550px){.grid,.grid4{grid-template-columns:1fr}.hero{text-align:center;justify-content:center}.container{padding:12px}aside{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
 
 <header>
- <div class="logo">KELVIN<span>.</span></div>
- <nav aria-label="Main navigation">
-  <a href="#home">Home</a><a href="#about">About</a><a href="#education">Education</a>
-  <a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
-  <a href="#services">Services</a><a href="#contact">Contact</a><a href="#admin">Admin</a>
-  <button class="theme-toggle" id="themeToggle" type="button" onclick="toggleTheme()">🌙 Theme</button>
- </nav>
+ <div class="brand">KELVIN<span>.</span> PORTFOLIO</div>
+ <div>
+  <button class="btn dark" onclick="toggleTheme()">◐ Theme</button>
+  <button class="btn" onclick="showPublic()">View Website</button>
+ </div>
 </header>
 
-<main id="mainWebsite">
-<section class="hero" id="home">
- <div class="hero-content">
-  <span class="badge" style="background:#ffffff22;color:white">WELCOME TO MY PORTFOLIO</span>
-  <h1>Hello, I'm <span>Kelvin Kiplagat</span></h1>
-  <h2>ICT Graduate | Web Developer | IT Enthusiast</h2>
-  <p id="heroText">Passionate about technology, software development and creating digital solutions that make work easier.</p>
-  <a href="#projects" class="btn btn-white">Explore My Projects</a>
-  <a href="#contact" class="btn">Contact Me</a>
-  <p class="small">Eldoret, Kenya</p>
+<!-- ADMIN LOGIN -->
+<div id="login" class="login">
+ <div class="loginbox">
+  <h2>Administrator Login</h2>
+  <p>Manage your portfolio and all three project systems.</p>
+  <form id="loginForm">
+   <label>Admin password</label>
+   <input id="password" type="password" required placeholder="Enter password">
+   <button class="btn" style="width:100%">Login</button>
+  </form>
+  <p><small>Initial password: 1234. Change it in Settings.</small></p>
  </div>
-</section>
+</div>
 
-<section id="about"><div class="container">
- <div class="section-title"><h2>About Me</h2><p>Get to know me and my professional background.</p></div>
- <div class="about-grid">
-  <div class="profile-card" style="text-align:center">
-   <div class="profile-icon" id="profilePreview">KK</div>
-   <h2>Kelvin Kiplagat Kitum</h2><p class="muted">ICT Graduate</p>
-   <p><span class="badge">Technology</span><span class="badge">Web Development</span></p>
-   <div class="profile-photo-tools">
-    <label for="profileUpload" class="small">Add your profile photo (optional)</label>
-    <input id="profileUpload" type="file" accept="image/*" onchange="uploadProfilePhoto(event)">
+<!-- ADMIN DASHBOARD -->
+<div id="dashboard" class="dashboard hidden">
+ <aside>
+  <h3>ADMIN PANEL</h3>
+  <button onclick="page('home')">▦ Dashboard</button>
+  <button onclick="page('profile')">◈ Portfolio Manager</button>
+  <button onclick="page('school')">▤ School Management</button>
+  <button onclick="page('voting')">◉ Online Voting</button>
+  <button onclick="page('cars')">▱ DRIVENEST Cars</button>
+  <button onclick="page('messages')">✉ Messages</button>
+  <button onclick="page('backup')">▥ Reports & Backup</button>
+  <button onclick="page('settings')">⚙ Settings</button>
+  <button onclick="showPublic()">↗ Public Website</button>
+  <button onclick="logout()">⇥ Logout</button>
+ </aside>
+ <main><div id="adminContent"></div></main>
+</div>
+
+<!-- PUBLIC WEBSITE -->
+<div id="public" class="hidden">
+ <div class="container">
+  <nav style="background:#111827;padding:12px;border-radius:8px">
+   <a href="#home">Home</a><a href="#about">About</a><a href="#education">Education</a>
+   <a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+   <button class="btn" onclick="showLogin()">Admin</button>
+  </nav>
+
+  <section id="home" class="hero">
+   <div>
+    <small>ICT GRADUATE | ELDORET, KENYA</small>
+    <h1 id="publicName">Kelvin Kiplagat Kitum</h1>
+    <h3 id="publicTitle">ICT Graduate | Web Developer</h3>
+    <p id="publicBio"></p>
+    <a id="cvLink" class="btn secondary" href="#" download>Download CV</a>
+    <a id="whatsappLink" class="btn" target="_blank">Contact Me</a>
    </div>
-  </div>
-  <div>
-   <h2>Who I Am</h2>
-   <p>I am an ICT graduate with an interest in information technology, computer systems, networking and web development. I enjoy solving problems through technology and developing practical digital solutions.</p><br>
-   <p>My goal is to continue growing professionally, gain more experience and contribute to organisations through my technical skills.</p>
-   <a href="#contact" class="btn">Let's Connect</a>
-  </div>
- </div>
-</div></section>
+   <img id="publicPhoto" class="avatar" alt="Profile photo">
+  </section>
 
-<section id="education" class="alt"><div class="container">
- <div class="section-title"><h2>Education Background</h2><p>My academic journey.</p></div>
- <div class="grid">
-  <div class="card"><h3>🎓 KEMU</h3><p><b>Information Technology</b></p><p>Completed: 2024</p></div>
-  <div class="card"><h3>📚 Kapsowar Boys High School</h3><p><b>Secondary Education</b></p><p>Started: 2019</p></div>
-  <div class="card"><h3>📚 Tobongon</h3><p><b>Primary Education</b></p><p>KCPE: 2015</p></div>
- </div>
-</div></section>
+  <section id="about" class="card">
+   <h2>About Me</h2>
+   <p id="publicAbout"></p>
+   <p id="publicLocation"></p>
+   <p id="publicEmail"></p>
+   <p id="publicPhone"></p>
+  </section>
 
-<section id="experience"><div class="container">
- <div class="section-title"><h2>Work Experience</h2><p>My practical experience and professional exposure.</p></div>
- <div class="grid">
-  <div class="card"><h3>KVDA Eldoret</h3><span class="badge">2023–2025</span><p><b>ICT Attachee / Intern</b></p><p>Practical ICT exposure, technical support and computer-related activities.</p></div>
-  <div class="card"><h3>Professional Development</h3><span class="badge">Ongoing</span><p><b>Independent ICT Projects</b></p><p>Developing practical web applications and improving technical knowledge.</p></div>
- </div>
-</div></section>
+  <section id="education">
+   <h2>Education Background</h2>
+   <div id="publicEducation" class="grid"></div>
+  </section>
 
-<section id="skills" class="alt"><div class="container">
- <div class="section-title"><h2>Technical Skills</h2><p>Technologies and areas of interest.</p></div>
- <div class="two-col">
-  <div>
-   <div class="skill"><div class="skill-label"><b>HTML</b><span>85%</span></div><div class="progress"><div style="width:85%"></div></div></div>
-   <div class="skill"><div class="skill-label"><b>CSS</b><span>80%</span></div><div class="progress"><div style="width:80%"></div></div></div>
-   <div class="skill"><div class="skill-label"><b>JavaScript</b><span>75%</span></div><div class="progress"><div style="width:75%"></div></div></div>
-   <div class="skill"><div class="skill-label"><b>Computer Maintenance</b><span>80%</span></div><div class="progress"><div style="width:80%"></div></div></div>
-  </div>
-  <div class="card"><h3>Other Competencies</h3>
-   <p>✓ Computer troubleshooting</p><p>✓ Networking fundamentals</p><p>✓ Software installation</p>
-   <p>✓ Microsoft Office</p><p>✓ IT technical support</p><p>✓ Database fundamentals</p><p>✓ Communication and teamwork</p>
-  </div>
- </div>
-</div></section>
+  <section id="experience">
+   <h2>Work Experience</h2>
+   <div id="publicExperience"></div>
+  </section>
 
-<section id="projects"><div class="container">
- <div class="section-title"><h2>My Projects</h2><p>Explore my practical software demonstrations.</p></div>
- <input id="projectSearch" aria-label="Search projects" placeholder="Search projects..." oninput="filterProjects()">
- <div class="grid" id="projectGrid">
-  <div class="project-card" data-project="school management student registration records"><div class="project-icon">🏫</div><h3>School Management System</h3><p>Manage students, registration, records and school statistics.</p><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span><br><button class="btn" onclick="openApp('school')">Open System</button></div>
-  <div class="project-card" data-project="online voting election candidates results"><div class="project-icon">🗳️</div><h3>Online Voting System</h3><p>Candidate registration, demo voting and election results.</p><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span><br><button class="btn" onclick="openApp('voting')">Open System</button></div>
-  <div class="project-card" data-project="drivenest motor cars vehicle catalogue shopping enquiry"><div class="project-icon">🚘</div><h3>DRIVENEST Motor Cars</h3><p>Explore vehicles, prices and a shopping enquiry cart.</p><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JavaScript</span><br><button class="btn" onclick="openApp('cars')">Open System</button></div>
- </div>
- <p id="noProjects" class="muted hidden">No matching projects found.</p>
- <div class="feature-note">These are interactive front-end demonstrations. Their records are stored in your current browser, not in a shared online database.</div>
-</div></section>
+  <section id="skills">
+   <h2>Technical Skills</h2>
+   <div id="publicSkills" class="grid"></div>
+  </section>
 
-<section id="services" class="alt"><div class="container">
- <div class="section-title"><h2>My Services</h2><p>Technology services and support.</p></div>
- <div class="grid">
-  <div class="card"><h3>💻 Web Development</h3><p>Creating responsive websites and interfaces.</p></div>
-  <div class="card"><h3>🖥️ Computer Support</h3><p>Computer troubleshooting and software installation.</p></div>
-  <div class="card"><h3>🌐 Networking</h3><p>Basic network setup and technical assistance.</p></div>
-  <div class="card"><h3>📊 System Development</h3><p>Developing simple management and business systems.</p></div>
- </div>
-</div></section>
+  <section id="projects">
+   <h2>My Projects</h2>
+   <div id="publicProjects" class="grid"></div>
+  </section>
 
-<section id="resume"><div class="container">
- <div class="section-title"><h2>My Resume</h2><p>View or save my professional profile as a PDF.</p></div>
- <div class="card" style="text-align:center">
-  <h2>Kelvin Kiplagat Kitum</h2><p>ICT Graduate | Web Development | IT Support</p><p>Eldoret, Kenya</p>
-  <p>Phone: +254721328063</p><p>Email: kevohkevz@gmail.com</p>
-  <button class="btn" onclick="downloadCV()">Print / Save CV as PDF</button>
- </div>
-</div></section>
+  <section id="services">
+   <h2>Services</h2>
+   <div id="publicServices" class="grid"></div>
+  </section>
 
-<section id="contact" class="alt"><div class="container">
- <div class="section-title"><h2>Contact Me</h2><p>Have an opportunity or project? Let's connect.</p></div>
- <div class="two-col">
-  <div class="card"><h3>Get In Touch</h3><p>📞 +254 721 328 063</p><p>✉️ kevohkevz@gmail.com</p><p>📍 Eldoret, Kenya</p>
-   <a class="btn btn-green" href="tel:+254721328063">Call Me</a><a class="btn" href="mailto:kevohkevz@gmail.com">Email Me</a>
-   <a class="btn btn-green" href="https://wa.me/254721328063?text=Hello%20Kelvin%2C%20I%20visited%20your%20portfolio." target="_blank" rel="noopener">WhatsApp Me</a>
-  </div>
-  <div class="card"><h3>Send an Enquiry</h3>
-   <form onsubmit="sendEmail(event)">
-    <label>Your Name</label><input id="contactName" required maxlength="100" placeholder="Enter your name">
-    <label>Your Email</label><input id="contactEmail" type="email" required maxlength="150" placeholder="Enter email">
-    <label>Message</label><textarea id="contactMessage" required maxlength="2000" placeholder="Write your message"></textarea>
-    <button class="btn" type="submit">Send Message</button>
+  <section id="contact" class="card">
+   <h2>Contact Me</h2>
+   <p>Interested in working together? Send an enquiry.</p>
+   <form id="contactForm">
+    <label>Your name</label><input name="name" required>
+    <label>Email</label><input name="email" type="email" required>
+    <label>Subject</label><input name="subject" required>
+    <label>Message</label><textarea name="message" required></textarea>
+    <button class="btn">Send Message</button>
    </form>
-   <p class="small muted">Your email app will open with the enquiry prepared. This static website does not send messages to a server.</p>
-  </div>
+  </section>
  </div>
-</div></section>
+ <footer>© <span id="year"></span> Kelvin Kiplagat Kitum. All rights reserved.</footer>
+</div>
 
-<section id="admin"><div class="container">
- <div class="section-title"><h2>Administrator</h2><p>Manage selected portfolio information on this browser.</p></div>
- <div class="card" id="adminLogin"><h3>Admin Login</h3><p class="muted small">Demo password: 1234. This browser-only demo login is not secure for a public website.</p>
-  <label>Enter Password</label><input type="password" id="adminPassword" placeholder="Admin password">
-  <button class="btn" onclick="loginAdmin()">Login</button><p id="loginError" class="error hidden">Incorrect password.</p>
- </div>
- <div class="card hidden" id="adminDashboard">
-  <h3>Admin Dashboard</h3>
-  <div class="grid" style="margin-top:15px">
-   <div class="stat"><h2>3</h2><p>Portfolio Projects</p></div>
-   <div class="stat"><h2 id="studentCount">0</h2><p>Demo Students</p></div>
-   <div class="stat"><h2 id="messageCount">0</h2><p>Enquiries saved on this browser</p></div>
-  </div>
-  <h3 style="margin-top:25px">Update Homepage Introduction</h3><textarea id="newIntro"></textarea>
-  <button class="btn" onclick="saveIntro()">Save Introduction</button>
-  <h3 style="margin-top:25px">Local Enquiry Log</h3><div id="adminMessages" class="table-wrap"></div>
-  <button class="btn btn-red" onclick="clearMessages()">Clear Local Enquiries</button>
-  <button class="btn btn-red" onclick="logoutAdmin()">Logout</button>
-  <p class="muted small">All admin changes and enquiry records are stored in this browser only. They are not synced to visitors or other devices.</p>
- </div>
-</div></section>
-</main>
-
-<!-- SCHOOL MANAGEMENT SYSTEM -->
-<div id="schoolApp" class="app-page hidden"><div class="container">
- <div class="app-header"><div><h2>🏫 School Management System</h2><p>Student administration dashboard</p></div><button class="btn btn-white" onclick="closeApp()">Back to Portfolio</button></div>
- <div class="grid"><div class="stat"><h2 id="totalStudents">0</h2><p>Total Students</p></div><div class="stat"><h2 id="maleStudents">0</h2><p>Male Students</p></div><div class="stat"><h2 id="femaleStudents">0</h2><p>Female Students</p></div></div>
- <div class="panel" style="margin-top:20px"><h3>Register New Student</h3><form onsubmit="addStudent(event)">
-  <div class="two-col">
-   <div><label>Full Name</label><input id="studentName" required maxlength="100" placeholder="Student name"></div>
-   <div><label>Admission Number</label><input id="admissionNo" required maxlength="30" placeholder="ADM001"></div>
-   <div><label>Gender</label><select id="studentGender" required><option value="">Select gender</option><option>Male</option><option>Female</option></select></div>
-   <div><label>Class</label><select id="studentClass"><option>Grade 1</option><option>Grade 2</option><option>Grade 3</option><option>Grade 4</option><option>Grade 5</option><option>Grade 6</option><option>Grade 7</option><option>Grade 8</option><option>Grade 9</option><option>Form 1</option><option>Form 2</option><option>Form 3</option><option>Form 4</option></select></div>
-  </div><button class="btn">Register Student</button>
- </form></div>
- <div class="panel" style="margin-top:20px"><h3>Student Records</h3><input id="studentSearch" placeholder="Search students..." oninput="renderStudents()">
-  <div class="table-wrap"><table><thead><tr><th>Name</th><th>Admission</th><th>Gender</th><th>Class</th><th>Action</th></tr></thead><tbody id="studentTable"></tbody></table></div>
- </div>
-</div></div>
-
-<!-- ONLINE VOTING SYSTEM -->
-<div id="votingApp" class="app-page hidden"><div class="container">
- <div class="app-header"><div><h2>🗳️ Online Voting System</h2><p>Election demonstration platform</p></div><button class="btn btn-white" onclick="closeApp()">Back to Portfolio</button></div>
- <div class="notice">Demonstration only. This is not a secure or official election system.</div>
- <div class="grid"><div class="stat"><h2 id="voteTotal">0</h2><p>Total Demo Votes</p></div><div class="stat"><h2 id="candidateTotal">3</h2><p>Candidates</p></div><div class="stat"><h2 id="voteStatus">Open</h2><p>Election Status</p></div></div>
- <div class="panel" style="margin-top:20px"><h3>Voter Verification</h3><label>Enter your demo voter ID</label><input id="voterID" placeholder="Example: VOTER001"><p class="muted small">Each ID can vote once in this browser. This is not real identity verification.</p></div>
- <div class="grid" id="candidateCards" style="margin-top:20px"></div>
- <div class="panel" style="margin-top:20px"><h3>Election Results</h3><div id="results"></div><button class="btn" onclick="renderVoting()">Refresh Results</button></div>
-</div></div>
-
-<!-- DRIVENEST -->
-<div id="carsApp" class="app-page hidden"><div class="container">
- <div class="app-header"><div><h2>🚘 DRIVENEST MOTOR CARS</h2><p>Find your next vehicle</p></div><button class="btn btn-white" onclick="closeApp()">Back to Portfolio</button></div>
- <h2>Explore Our Vehicles</h2><p class="muted">Demo vehicle catalogue. Prices are illustrative, not live offers.</p>
- <input id="carSearch" placeholder="Search vehicle..." oninput="renderCars()"><div class="grid" id="carList" style="margin-top:20px"></div>
- <div class="panel" style="margin-top:25px"><h2>🛒 Enquiry Cart (<span id="cartCount">0</span>)</h2><div id="cartItems"></div><h3 id="cartTotal">Total: KSh 0</h3><button class="btn btn-green" onclick="sendCarEnquiry()">Send Vehicle Enquiry</button><button class="btn btn-red" onclick="clearCart()">Clear Cart</button></div>
-</div></div>
-
-<a class="floating-contact" href="https://wa.me/254721328063?text=Hello%20Kelvin%2C%20I%20visited%20your%20portfolio." target="_blank" rel="noopener">WhatsApp</a>
-<div id="toast" role="status" aria-live="polite"></div>
-<footer><h2>KELVIN KIPLAGAT</h2><p>ICT Graduate | Technology Enthusiast</p><p>Eldoret, Kenya</p><p>Phone: +254721328063</p><p>Email: kevohkevz@gmail.com</p><p>© <span id="year"></span> Kelvin Kiplagat. All Rights Reserved.</p></footer>
+<div id="toast"></div>
 
 <script>
-"use strict";
-const $=id=>document.getElementById(id);
-let toastTimer;
+/* ================= DATABASE ================= */
+const KEY="kelvin_complete_portfolio";
+const initial={
+ password:"1234",
+ profile:{
+  name:"Kelvin Kiplagat Kitum",
+  title:"ICT Graduate | Web Developer | IT Support",
+  bio:"I am an ICT graduate passionate about technology, web development and solving real-world problems through digital solutions.",
+  about:"I have an ICT background and practical experience supporting technology operations. I am interested in web development, computer systems, networking and digital innovation.",
+  location:"Eldoret, Kenya",
+  email:"kevohkevz@gmail.com",
+  phone:"+254721328063",
+  whatsapp:"254721328063",
+  photo:"",
+  cv:"",
+  cvName:""
+ },
+ education:[
+  {institution:"Kenya Methodist University",course:"Information Technology",period:"Completed 2024"},
+  {institution:"ICT Diploma",course:"Information and Communication Technology",period:"Completed"},
+  {institution:"Kapsowar Boys High School",course:"Secondary Education",period:"2019 onwards"},
+  {institution:"Tobongon Primary School",course:"Primary Education",period:"Completed"}
+ ],
+ experience:[
+  {organisation:"KVDA Eldoret",role:"ICT Attachee / Intern",period:"2023–2025",details:"Supported ICT operations, computer maintenance, troubleshooting and technical support."}
+ ],
+ skills:[
+  {name:"HTML",level:85},{name:"CSS",level:80},{name:"JavaScript",level:75},
+  {name:"Computer maintenance",level:85},{name:"Networking",level:75},
+  {name:"Database management",level:70},{name:"IT support",level:85}
+ ],
+ projects:[
+  {name:"School Management System",description:"Manage student records, teachers, classes, attendance, fees and academic results.",app:"school"},
+  {name:"Online Voting System",description:"Manage elections, voters, candidates, voting records and results.",app:"voting"},
+  {name:"DRIVENEST Motor Cars",description:"Manage vehicle inventory, customers, enquiries, test drives and sales.",app:"cars"}
+ ],
+ services:[
+  {name:"Website Development",description:"Responsive websites and web applications."},
+  {name:"IT Support",description:"Computer troubleshooting and maintenance."},
+  {name:"Networking",description:"Network installation and technical support."}
+ ],
+ school:{students:[],teachers:[],classes:[],attendance:[],fees:[],results:[]},
+ voting:{elections:[],candidates:[],voters:[],ballots:[]},
+ cars:{vehicles:[],customers:[],enquiries:[],bookings:[],sales:[]},
+ messages:[],activity:[]
+};
 
-function toast(message){
- const t=$("toast");t.textContent=message;t.style.display="block";
- clearTimeout(toastTimer);
- toastTimer=setTimeout(()=>t.style.display="none",3000);
-}
-
-function getData(key,fallback){
- try{
-  const value=localStorage.getItem(key);
-  return value?JSON.parse(value):fallback;
- }catch(e){return fallback}
-}
-
-function saveData(key,value){
- try{
-  localStorage.setItem(key,JSON.stringify(value));
-  return true;
- }catch(e){
-  toast("Storage is full or unavailable in this browser.");
-  return false;
- }
-}
-
-$("year").textContent=new Date().getFullYear();
-
-const savedIntro=localStorage.getItem("portfolioIntro");
-if(savedIntro)$("heroText").textContent=savedIntro;
-
-// Theme preference
-function applyTheme(theme){
- document.body.classList.toggle("dark-mode",theme==="dark");
- $("themeToggle").textContent=theme==="dark"?"☀️ Light":"🌙 Dark";
-}
-
-function toggleTheme(){
- const next=document.body.classList.contains("dark-mode")?"light":"dark";
- localStorage.setItem("portfolioTheme",next);
- applyTheme(next);
-}
-
-applyTheme(localStorage.getItem("portfolioTheme")||"light");
-
-// Profile photo
-function uploadProfilePhoto(event){
- const file=event.target.files&&event.target.files[0];
- if(!file)return;
-
- if(!file.type.startsWith("image/")){
-  toast("Please select an image file.");
-  return;
- }
-
- if(file.size>2*1024*1024){
-  toast("Choose an image smaller than 2 MB.");
-  return;
- }
-
- const reader=new FileReader();
-
- reader.onload=()=>{
-  try{
-   localStorage.setItem("portfolioProfilePhoto",reader.result);
-   showProfilePhoto(reader.result);
-   toast("Profile photo updated on this browser.");
-  }catch(e){
-   toast("Image is too large for browser storage.");
+let db;
+try{
+ db=Object.assign({},initial,JSON.parse(localStorage.getItem(KEY))||{});
+ for(const k of Object.keys(initial)){
+  if(initial[k]&&typeof initial[k]==="object"&&!Array.isArray(initial[k])){
+   db[k]=Object.assign({},initial[k],db[k]||{});
   }
+ }
+}catch(e){db=JSON.parse(JSON.stringify(initial))}
+function save(){localStorage.setItem(KEY,JSON.stringify(db))}
+function id(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7)}
+function safe(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function notify(t){
+ const x=document.getElementById("toast");
+ x.textContent=t;x.style.display="block";
+ setTimeout(()=>x.style.display="none",2500);
+}
+function log(t){db.activity.unshift({action:t,date:new Date().toLocaleString()});db.activity=db.activity.slice(0,100);save()}
+function toggleTheme(){document.body.classList.toggle("dark")}
+function showLogin(){document.getElementById("public").classList.add("hidden");document.getElementById("login").classList.remove("hidden")}
+function showPublic(){
+ document.getElementById("login").classList.add("hidden");
+ document.getElementById("dashboard").classList.add("hidden");
+ document.getElementById("public").classList.remove("hidden");
+ renderPublic();
+ window.scrollTo(0,0);
+}
+function logout(){
+ document.getElementById("dashboard").classList.add("hidden");
+ document.getElementById("login").classList.remove("hidden");
+}
+document.getElementById("loginForm").onsubmit=e=>{
+ e.preventDefault();
+ if(document.getElementById("password").value===db.password){
+  document.getElementById("login").classList.add("hidden");
+  document.getElementById("dashboard").classList.remove("hidden");
+  log("Administrator login");
+  page("home");
+ }else notify("Incorrect password");
+};
+
+/* ================= ADMIN NAVIGATION ================= */
+function page(p){
+ const pages={home:homePage,profile:profilePage,school:schoolPage,voting:votingPage,cars:carsPage,messages:messagesPage,backup:backupPage,settings:settingsPage};
+ (pages[p]||homePage)();
+}
+
+/* ================= COMMON DISPLAY ================= */
+function heading(t,s){return `<div class="row"><div><h1>${t}</h1><p class="muted">${s}</p></div></div>`}
+function stat(t,n){return `<div class="card stat"><small>${t}</small><strong>${n}</strong></div>`}
+function field(label,name,value="",type="text"){
+ return `<label>${label}</label><input name="${name}" type="${type}" value="${safe(value)}">`;
+}
+function formData(form){return Object.fromEntries(new FormData(form))}
+function recordList(type,arr,fields){
+ return arr.map(x=>`<div class="item"><div class="row"><b>${safe(fields.map(f=>x[f]).filter(Boolean).join(" · "))}</b><span><button class="btn secondary" onclick="editRecord('${type}','${x.id}')">Edit</button><button class="btn danger" onclick="deleteRecord('${type}','${x.id}')">Delete</button></span></div></div>`).join("")||"<p class='muted'>No records added.</p>";
+}
+
+/* ================= DASHBOARD ================= */
+function homePage(){
+ document.getElementById("adminContent").innerHTML=
+ heading("Administrator Dashboard","Welcome to your portfolio management workspace.")+
+ `<div class="grid4">
+ ${stat("Students",db.school.students.length)}
+ ${stat("Teachers",db.school.teachers.length)}
+ ${stat("Elections",db.voting.elections.length)}
+ ${stat("Vehicles",db.cars.vehicles.length)}
+ </div>
+ <div class="grid" style="margin-top:15px">
+ <div class="card"><h2>Personal Portfolio</h2><p>Update your CV, photo, education, experience, skills and projects.</p><button class="btn" onclick="page('profile')">Manage Portfolio</button></div>
+ <div class="card"><h2>School Management</h2><p>Manage student information, classes, teachers, attendance and fees.</p><button class="btn" onclick="page('school')">Open System</button></div>
+ <div class="card"><h2>Online Voting</h2><p>Manage elections, candidates, voter records and results.</p><button class="btn" onclick="page('voting')">Open System</button></div>
+ <div class="card"><h2>DRIVENEST Motor Cars</h2><p>Manage inventory, customers, enquiries, bookings and sales.</p><button class="btn" onclick="page('cars')">Open System</button></div>
+ </div>
+ <div class="card"><h2>Recent Activity</h2>${db.activity.slice(0,8).map(x=>`<div class="item">${safe(x.action)} <small>${safe(x.date)}</small></div>`).join("")||"No activity yet."}</div>`;
+}
+
+/* ================= PORTFOLIO MANAGER ================= */
+function profilePage(){
+ const p=db.profile;
+ document.getElementById("adminContent").innerHTML=
+ heading("Portfolio Manager","Manage the information displayed on your public website.")+
+ `<div class="card"><h2>Personal Details</h2>
+ <form id="profileForm" class="grid">
+ ${field("Full name","name",p.name)}
+ ${field("Professional title","title",p.title)}
+ ${field("Location","location",p.location)}
+ ${field("Email","email",p.email,"email")}
+ ${field("Phone","phone",p.phone)}
+ ${field("WhatsApp number","whatsapp",p.whatsapp)}
+ <div><label>Short profile</label><textarea name="bio">${safe(p.bio)}</textarea></div>
+ <div><label>About me</label><textarea name="about">${safe(p.about)}</textarea></div>
+ <div><label>Profile photo</label><input type="file" id="photoFile" accept="image/*"></div>
+ <div><label>CV PDF</label><input type="file" id="cvFile" accept=".pdf,application/pdf"></div>
+ <button class="btn">Save Profile</button>
+ </form>
+ <p class="muted">Uploaded CV: ${safe(p.cvName||"No CV uploaded")}</p>
+ <button class="btn secondary" onclick="downloadCV()">Download CV</button>
+ </div>
+ <div class="grid">
+ <div class="card"><h2>Education</h2><button class="btn" onclick="addSimple('education')">Add Education</button>${recordList("education",db.education,["institution","course"])}</div>
+ <div class="card"><h2>Experience</h2><button class="btn" onclick="addSimple('experience')">Add Experience</button>${recordList("experience",db.experience,["organisation","role"])}</div>
+ <div class="card"><h2>Skills</h2><button class="btn" onclick="addSimple('skills')">Add Skill</button>${recordList("skills",db.skills,["name","level"])}</div>
+ <div class="card"><h2>Services</h2><button class="btn" onclick="addSimple('services')">Add Service</button>${recordList("services",db.services,["name"])}</div>
+ <div class="card"><h2>Projects</h2><button class="btn" onclick="addSimple('projects')">Add Project</button>${recordList("projects",db.projects,["name"])}</div>
+ </div>`;
+ document.getElementById("profileForm").onsubmit=async e=>{
+  e.preventDefault();
+  Object.assign(db.profile,formData(e.target));
+  const photo=document.getElementById("photoFile").files[0];
+  const cv=document.getElementById("cvFile").files[0];
+  if(photo)db.profile.photo=await readFile(photo);
+  if(cv){db.profile.cv=await readFile(cv);db.profile.cvName=cv.name}
+  save();log("Updated portfolio profile");notify("Profile saved");profilePage();
  };
-
- reader.readAsDataURL(file);
 }
-
-function showProfilePhoto(src){
- $("profilePreview").innerHTML="";
- const img=document.createElement("img");
- img.src=src;
- img.alt="Kelvin Kiplagat profile photo";
- $("profilePreview").appendChild(img);
-}
-
-const savedPhoto=localStorage.getItem("portfolioProfilePhoto");
-if(savedPhoto)showProfilePhoto(savedPhoto);
-
-// Project search
-function filterProjects(){
- const q=$("projectSearch").value.trim().toLowerCase();
- let visible=0;
-
- document.querySelectorAll(".project-card").forEach(card=>{
-  const match=card.dataset.project.includes(q)||card.innerText.toLowerCase().includes(q);
-  card.classList.toggle("hidden",!match);
-  if(match)visible++;
+function readFile(file){
+ return new Promise((resolve,reject)=>{
+  const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=reject;r.readAsDataURL(file);
  });
-
- $("noProjects").classList.toggle("hidden",visible>0);
 }
-
-// Open and close project systems
-function openApp(name){
- ["mainWebsite","schoolApp","votingApp","carsApp"].forEach(id=>$(id).classList.add("hidden"));
-
- const target=$(name+"App");
-
- if(!target){
-  $("mainWebsite").classList.remove("hidden");
-  return;
- }
-
- target.classList.remove("hidden");
- window.scrollTo(0,0);
-
- if(name==="school")renderStudents();
- if(name==="voting")renderVoting();
-
- if(name==="cars"){
-  renderCars();
-  renderCart();
- }
+function addSimple(type){editRecord(type,null)}
+function editRecord(type,recordId){
+ const arr=db[type];
+ const old=recordId?arr.find(x=>x.id===recordId):{};
+ const fields={
+ education:["institution","course","period"],
+ experience:["organisation","role","period","details"],
+ skills:["name","level"],
+ services:["name","description"],
+ projects:["name","description"]
+ }[type];
+ if(!fields)return;
+ const labels={institution:"Institution",course:"Course",period:"Period",organisation:"Organisation",role:"Role",details:"Details",name:"Name",level:"Level (%)",description:"Description"};
+ const form=`<div class="card"><h2>${recordId?"Edit":"Add"} ${type}</h2><form id="recordForm">${fields.map(f=>field(labels[f]||f,f,old[f]||"",f==="level"?"number":"text")).join("")}<button class="btn">Save</button><button type="button" class="btn secondary" onclick="page('profile')">Cancel</button></form></div>`;
+ document.getElementById("adminContent").innerHTML=form;
+ document.getElementById("recordForm").onsubmit=e=>{
+  e.preventDefault();let data=formData(e.target);
+  if(recordId)Object.assign(old,data);else arr.push({id:id(),...data});
+  save();log("Updated "+type);profilePage();
+ };
 }
-
-function closeApp(){
- ["schoolApp","votingApp","carsApp"].forEach(id=>$(id).classList.add("hidden"));
- $("mainWebsite").classList.remove("hidden");
- window.scrollTo(0,0);
+function deleteRecord(type,recordId){
+ if(!confirm("Delete this record?"))return;
+ db[type]=db[type].filter(x=>x.id!==recordId);
+ save();log("Deleted "+type);
+ if(["education","experience","skills","services","projects"].includes(type))profilePage();
 }
-
-// Printable CV
 function downloadCV(){
- const cvWindow=window.open("","_blank");
-
- if(!cvWindow){
-  toast("Allow pop-ups to open the printable CV.");
-  return;
- }
-
- const cvHTML=`<!DOCTYPE html>
- <html lang="en">
- <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width,initial-scale=1">
- <title>Kelvin Kiplagat Kitum - CV</title>
- <style>
- body{font-family:Arial,sans-serif;color:#20283a;line-height:1.55;max-width:800px;margin:35px auto;padding:0 25px}
- h1{color:#4336a8;margin-bottom:3px}
- h2{font-size:17px;color:#4336a8;border-bottom:1px solid #ddd;padding-bottom:4px;margin-top:22px}
- .sub{color:#555}
- p{margin:5px 0}
- ul{margin-top:6px}
- @media print{body{margin:12mm auto;padding:0}button{display:none}}
- </style>
- </head>
- <body>
- <h1>Kelvin Kiplagat Kitum</h1>
- <p class="sub">ICT Graduate | Web Development | IT Support</p>
- <p>Eldoret, Kenya | +254721328063 | kevohkevz@gmail.com</p>
-
- <h2>PERSONAL PROFILE</h2>
- <p>An ICT graduate interested in information technology, web development, computer systems and technical support. Keen to apply technical skills, solve problems and continue professional development.</p>
-
- <h2>EDUCATION</h2>
- <p><b>KEMU</b> — Information Technology, completed 2024.</p>
- <p><b>Kapsowar Boys High School</b> — Secondary Education.</p>
- <p><b>Tobongon</b> — Primary Education, KCPE 2015.</p>
-
- <h2>EXPERIENCE</h2>
- <p><b>KVDA Eldoret</b> — ICT Attachee / Intern (2023–2025).</p>
- <p>Practical exposure to ICT support, troubleshooting and computer-related activities.</p>
-
- <h2>TECHNICAL SKILLS</h2>
- <ul>
- <li>HTML, CSS and JavaScript</li>
- <li>Computer troubleshooting and maintenance</li>
- <li>Networking fundamentals</li>
- <li>Software installation and Microsoft Office</li>
- <li>Database fundamentals and IT technical support</li>
- </ul>
-
- <h2>REFERENCES</h2>
- <p>Available upon request.</p>
-
- <p style="margin-top:30px">
- <button onclick="window.print()">Print / Save as PDF</button>
- </p>
- </body>
- </html>`;
-
- cvWindow.document.open();
- cvWindow.document.write(cvHTML);
- cvWindow.document.close();
- cvWindow.focus();
- setTimeout(()=>cvWindow.print(),500);
-}
-
-// Contact enquiries
-function sendEmail(e){
- e.preventDefault();
-
- const name=$("contactName").value.trim();
- const email=$("contactEmail").value.trim();
- const message=$("contactMessage").value.trim();
-
- if(!name||!email||!message){
-  toast("Please complete all fields.");
-  return;
- }
-
- const entries=getData("localMessages",[]);
-
- entries.unshift({
-  name,
-  email,
-  message,
-  date:new Date().toLocaleString()
- });
-
- saveData("localMessages",entries.slice(0,100));
-
- const subject=encodeURIComponent("Website enquiry from "+name);
- const body=encodeURIComponent(
-  "Name: "+name+"\nEmail: "+email+"\n\nMessage:\n"+message
- );
-
- window.location.href="mailto:kevohkevz@gmail.com?subject="+subject+"&body="+body;
- toast("Enquiry prepared in your email app.");
-}
-
-// Admin dashboard
-function loginAdmin(){
- if($("adminPassword").value==="1234"){
-  $("adminLogin").classList.add("hidden");
-  $("adminDashboard").classList.remove("hidden");
-  $("newIntro").value=$("heroText").textContent;
-  updateAdminStats();
+ if(db.profile.cv){
+  const a=document.createElement("a");a.href=db.profile.cv;a.download=db.profile.cvName||"Kelvin-CV.pdf";a.click();
  }else{
-  $("loginError").classList.remove("hidden");
+  const p=db.profile;
+  const text=`${p.name}\n${p.title}\n${p.location}\n${p.phone}\n${p.email}\n\nPROFILE\n${p.bio}\n${p.about}\n\nEDUCATION\n${db.education.map(x=>x.institution+" - "+x.course+" ("+x.period+")").join("\n")}\n\nEXPERIENCE\n${db.experience.map(x=>x.organisation+" - "+x.role+" ("+x.period+")").join("\n")}\n\nSKILLS\n${db.skills.map(x=>x.name).join(", ")}`;
+  const w=window.open("","_blank");if(!w)return notify("Allow pop-ups to generate your CV.");
+  w.document.write("<pre style='font:14px Arial;white-space:pre-wrap'>"+safe(text)+"</pre><button onclick='print()'>Print / Save as PDF</button>");
  }
 }
 
-function logoutAdmin(){
- $("adminDashboard").classList.add("hidden");
- $("adminLogin").classList.remove("hidden");
- $("adminPassword").value="";
- $("loginError").classList.add("hidden");
+/* ================= SCHOOL MANAGEMENT ================= */
+function schoolPage(){
+ document.getElementById("adminContent").innerHTML=
+ heading("School Management System","Manage school records and administrative information.")+
+ `<div class="grid4">${stat("Students",db.school.students.length)}${stat("Teachers",db.school.teachers.length)}${stat("Classes",db.school.classes.length)}${stat("Fee records",db.school.fees.length)}</div>
+ <div class="grid">
+ ${schoolModule("students","Students",["admission","name","gender","className","guardian","phone"])}
+ ${schoolModule("teachers","Teachers",["staffNo","name","subject","phone"])}
+ ${schoolModule("classes","Classes",["className","teacher","year"])}
+ ${schoolModule("attendance","Attendance",["date","admission","status"])}
+ ${schoolModule("fees","Fee Records",["admission","amount","paid","date","reference"])}
+ ${schoolModule("results","Examination Results",["admission","subject","exam","score","grade"])}
+ </div>`;
 }
-
-function saveIntro(){
- const value=$("newIntro").value.trim();
-
- if(!value){
-  toast("Enter an introduction first.");
-  return;
+function schoolModule(type,title,fields){
+ const arr=db.school[type];
+ return `<div class="card"><div class="row"><h2>${title}</h2><button class="btn" onclick="addSchool('${type}')">+ Add</button></div>
+ <div class="tablewrap"><table><tr>${fields.map(f=>`<th>${f}</th>`).join("")}<th>Action</th></tr>
+ ${arr.map(x=>`<tr>${fields.map(f=>`<td>${safe(x[f])}</td>`).join("")}<td><button class="btn danger" onclick="removeSchool('${type}','${x.id}')">Delete</button></td></tr>`).join("")||`<tr><td colspan="${fields.length+1}">No records</td></tr>`}</table></div></div>`;
+}
+function addSchool(type){
+ const fields={
+ students:["admission","name","gender","className","guardian","phone"],
+ teachers:["staffNo","name","subject","phone"],
+ classes:["className","teacher","year"],
+ attendance:["date","admission","status"],
+ fees:["admission","amount","paid","date","reference"],
+ results:["admission","subject","exam","score","grade"]
+ }[type];
+ const values={};
+ fields.forEach(f=>values[f]=prompt("Enter "+f+":")||"");
+ if(fields.some(f=>!values[f]))return notify("All fields are required.");
+ if(type==="students"&&db.school.students.some(x=>x.admission===values.admission))return notify("Admission number already exists.");
+ db.school[type].push({id:id(),...values});
+ save();log("Added school "+type+" record");schoolPage();
+}
+function removeSchool(type,rid){
+ if(confirm("Delete this school record?")){
+  db.school[type]=db.school[type].filter(x=>x.id!==rid);save();log("Deleted school record");schoolPage();
  }
-
- localStorage.setItem("portfolioIntro",value);
- $("heroText").textContent=value;
- toast("Introduction updated successfully.");
 }
 
-function updateAdminStats(){
- $("studentCount").textContent=getData("schoolStudents",[]).length;
-
- const messages=getData("localMessages",[]);
- $("messageCount").textContent=messages.length;
-
- $("adminMessages").innerHTML=messages.length
- ?`<table>
- <thead><tr><th>Date</th><th>Name</th><th>Email</th><th>Message</th></tr></thead>
- <tbody>
- ${messages.map(m=>`
- <tr>
- <td>${escapeHTML(m.date)}</td>
- <td>${escapeHTML(m.name)}</td>
- <td>${escapeHTML(m.email)}</td>
- <td>${escapeHTML(m.message)}</td>
- </tr>`).join("")}
- </tbody></table>`
- :"<p class='muted'>No local enquiries have been recorded.</p>";
+/* ================= ONLINE VOTING ================= */
+function votingPage(){
+ document.getElementById("adminContent").innerHTML=
+ heading("Online Voting System","Create and manage sample elections and voting records.")+
+ `<div class="notice">This is a demonstration voting application using local browser storage. Do not use it for official, public or high-stakes elections.</div>
+ <div class="grid4">${stat("Elections",db.voting.elections.length)}${stat("Candidates",db.voting.candidates.length)}${stat("Voters",db.voting.voters.length)}${stat("Ballots",db.voting.ballots.length)}</div>
+ <div class="grid">
+ <div class="card"><h2>Elections</h2><button class="btn" onclick="addElection()">Create Election</button>${db.voting.elections.map(x=>`<div class="item"><b>${safe(x.title)}</b><p>${safe(x.status)}</p><button class="btn secondary" onclick="toggleElection('${x.id}')">Open / Close</button><button class="btn danger" onclick="removeVoting('elections','${x.id}')">Delete</button></div>`).join("")}</div>
+ <div class="card"><h2>Candidates</h2><button class="btn" onclick="addCandidate()">Register Candidate</button>${db.voting.candidates.map(x=>`<div class="item">${safe(x.name)} · ${safe(x.position)}<button class="btn danger" onclick="removeVoting('candidates','${x.id}')">Delete</button></div>`).join("")}</div>
+ <div class="card"><h2>Voters</h2><button class="btn" onclick="addVoter()">Register Voter</button>${db.voting.voters.map(x=>`<div class="item">${safe(x.name)} · ${safe(x.ref)}<button class="btn danger" onclick="removeVoting('voters','${x.id}')">Delete</button></div>`).join("")}</div>
+ <div class="card"><h2>Ballot Records</h2><button class="btn" onclick="castVote()">Record Demo Ballot</button><div class="tablewrap"><table><tr><th>Election</th><th>Candidate</th><th>Voter ref</th></tr>${db.voting.ballots.map(x=>`<tr><td>${safe(db.voting.elections.find(y=>y.id===x.election)?.title)}</td><td>${safe(db.voting.candidates.find(y=>y.id===x.candidate)?.name)}</td><td>${safe(db.voting.voters.find(y=>y.id===x.voter)?.ref)}</td></tr>`).join("")}</table></div></div>
+ </div><div class="card"><h2>Election Results</h2>${db.voting.elections.map(el=>`<h3>${safe(el.title)}</h3>${db.voting.candidates.filter(c=>c.election===el.id).map(c=>`<p>${safe(c.name)} — ${db.voting.ballots.filter(b=>b.election===el.id&&b.candidate===c.id).length} votes</p>`).join("")}`).join("")}</div>`;
+}
+function addElection(){
+ const title=prompt("Election title:");
+ if(!title)return;
+ db.voting.elections.push({id:id(),title,status:"Closed"});save();log("Created election");votingPage();
+}
+function toggleElection(rid){
+ const x=db.voting.elections.find(x=>x.id===rid);
+ if(x)x.status=x.status==="Open"?"Closed":"Open";
+ save();votingPage();
+}
+function addCandidate(){
+ if(!db.voting.elections.length)return notify("Create an election first.");
+ const el=db.voting.elections.find(x=>x.status==="Open")||db.voting.elections[0];
+ const name=prompt("Candidate name:");if(!name)return;
+ const position=prompt("Position:")||"Candidate";
+ db.voting.candidates.push({id:id(),name,position,election:el.id});save();votingPage();
+}
+function addVoter(){
+ const name=prompt("Voter name:"),ref=prompt("Voter reference:");
+ if(!name||!ref)return;
+ if(db.voting.voters.some(x=>x.ref===ref))return notify("Voter reference already registered.");
+ db.voting.voters.push({id:id(),name,ref});save();votingPage();
+}
+function castVote(){
+ const el=db.voting.elections.find(x=>x.status==="Open");
+ if(!el)return notify("No open election.");
+ const ref=prompt("Enter registered voter reference:");
+ const voter=db.voting.voters.find(x=>x.ref===ref);
+ if(!voter)return notify("Voter not registered.");
+ if(db.voting.ballots.some(x=>x.election===el.id&&x.voter===voter.id))return notify("This voter already has a ballot in this election.");
+ const candidates=db.voting.candidates.filter(x=>x.election===el.id);
+ if(!candidates.length)return notify("No candidates registered.");
+ const choice=prompt("Enter candidate number:\n"+candidates.map((x,i)=>(i+1)+". "+x.name).join("\n"));
+ const candidate=candidates[Number(choice)-1];if(!candidate)return notify("Invalid selection.");
+ db.voting.ballots.push({id:id(),election:el.id,voter:voter.id,candidate:candidate.id,date:new Date().toISOString()});
+ save();log("Recorded a demonstration ballot");votingPage();
+}
+function removeVoting(type,rid){
+ if(confirm("Delete this record?")){db.voting[type]=db.voting[type].filter(x=>x.id!==rid);save();votingPage()}
 }
 
-function clearMessages(){
- if(!confirm("Clear all enquiries saved in this browser?"))return;
-
- localStorage.removeItem("localMessages");
- updateAdminStats();
- toast("Local enquiry log cleared.");
+/* ================= DRIVENEST MOTOR CARS ================= */
+function carsPage(){
+ document.getElementById("adminContent").innerHTML=
+ heading("DRIVENEST Motor Cars","Vehicle dealership inventory and customer management.")+
+ `<div class="grid4">${stat("Vehicles",db.cars.vehicles.length)}${stat("Customers",db.cars.customers.length)}${stat("Enquiries",db.cars.enquiries.length)}${stat("Sales",db.cars.sales.length)}</div>
+ <div class="grid">
+ <div class="card"><div class="row"><h2>Vehicle Inventory</h2><button class="btn" onclick="addVehicle()">+ Add Vehicle</button></div>
+ ${db.cars.vehicles.map(x=>`<div class="item"><b>${safe(x.name)}</b><p>${safe(x.year)} · KSh ${safe(x.price)} · ${safe(x.status)}</p><button class="btn danger" onclick="removeCar('vehicles','${x.id}')">Delete</button></div>`).join("")||"No vehicles added."}</div>
+ <div class="card"><h2>Customers</h2><button class="btn" onclick="addCustomer()">+ Register Customer</button>
+ ${db.cars.customers.map(x=>`<div class="item">${safe(x.name)} · ${safe(x.phone)} <button class="btn danger" onclick="removeCar('customers','${x.id}')">Delete</button></div>`).join("")}</div>
+ <div class="card"><h2>Customer Enquiries</h2><button class="btn" onclick="addEnquiry()">+ Record Enquiry</button>
+ ${db.cars.enquiries.map(x=>`<div class="item">${safe(x.name)} · ${safe(x.vehicle)}<p>${safe(x.message)}</p></div>`).join("")}</div>
+ <div class="card"><h2>Test Drive Bookings</h2><button class="btn" onclick="addBooking()">+ Book Test Drive</button>
+ ${db.cars.bookings.map(x=>`<div class="item">${safe(x.customer)} · ${safe(x.vehicle)} · ${safe(x.date)}</div>`).join("")}</div>
+ <div class="card"><h2>Sales Records</h2><button class="btn" onclick="addSale()">+ Record Sale</button>
+ ${db.cars.sales.map(x=>`<div class="item">${safe(x.vehicle)} · ${safe(x.customer)} · KSh ${safe(x.amount)}</div>`).join("")}</div>
+ </div>`;
+}
+function addVehicle(){
+ const name=prompt("Vehicle make and model:"),year=prompt("Year:"),price=prompt("Price in KSh:"),fuel=prompt("Fuel type:");
+ if(!name||!year||!price)return;
+ db.cars.vehicles.push({id:id(),name,year,price,fuel,status:"Available"});save();log("Added vehicle");carsPage();
+}
+function addCustomer(){
+ const name=prompt("Customer name:"),phone=prompt("Phone number:"),email=prompt("Email:");
+ if(!name||!phone)return;
+ db.cars.customers.push({id:id(),name,phone,email});save();carsPage();
+}
+function addEnquiry(){
+ const name=prompt("Customer name:"),vehicle=prompt("Vehicle of interest:"),message=prompt("Enquiry details:");
+ if(!name||!vehicle)return;
+ db.cars.enquiries.push({id:id(),name,vehicle,message});save();carsPage();
+}
+function addBooking(){
+ const customer=prompt("Customer name:"),vehicle=prompt("Vehicle:"),date=prompt("Preferred date:");
+ if(!customer||!vehicle||!date)return;
+ db.cars.bookings.push({id:id(),customer,vehicle,date});save();carsPage();
+}
+function addSale(){
+ const customer=prompt("Customer name:"),vehicle=prompt("Vehicle:"),amount=prompt("Sale amount:");
+ if(!customer||!vehicle||!amount)return;
+ db.cars.sales.push({id:id(),customer,vehicle,amount,date:new Date().toLocaleDateString()});save();carsPage();
+}
+function removeCar(type,rid){
+ if(confirm("Delete this record?")){db.cars[type]=db.cars[type].filter(x=>x.id!==rid);save();carsPage()}
 }
 
-// School Management System
-function addStudent(e){
- e.preventDefault();
+/* ================= MESSAGES ================= */
+function messagesPage(){
+ document.getElementById("adminContent").innerHTML=
+ heading("Contact Messages","Messages submitted through your portfolio contact form.")+
+ `<div class="card"><div class="tablewrap"><table><tr><th>Name</th><th>Email</th><th>Subject</th><th>Message</th><th>Date</th><th>Action</th></tr>
+ ${db.messages.map(x=>`<tr><td>${safe(x.name)}</td><td>${safe(x.email)}</td><td>${safe(x.subject)}</td><td>${safe(x.message)}</td><td>${safe(x.date)}</td><td><button class="btn danger" onclick="deleteMessage('${x.id}')">Delete</button></td></tr>`).join("")||"<tr><td colspan='6'>No messages received.</td></tr>"}
+ </table></div></div>`;
+}
+function deleteMessage(rid){
+ db.messages=db.messages.filter(x=>x.id!==rid);save();messagesPage();
+}
 
- const student={
-  name:$("studentName").value.trim(),
-  admission:$("admissionNo").value.trim(),
-  gender:$("studentGender").value,
-  grade:$("studentClass").value
+/* ================= BACKUP & REPORTS ================= */
+function backupPage(){
+ document.getElementById("adminContent").innerHTML=
+ heading("Reports & Backup","Export, restore and protect your application records.")+
+ `<div class="grid">
+ <div class="card"><h2>Full Data Backup</h2><p>Download all portfolio and project records as JSON.</p><button class="btn" onclick="backup()">Download Backup</button></div>
+ <div class="card"><h2>Restore Backup</h2><p>Restore records from a previous JSON backup.</p><input type="file" id="backupFile" accept=".json"><button class="btn" onclick="restoreBackup()">Restore Data</button></div>
+ <div class="card"><h2>System Summary</h2>
+ <p>Students: ${db.school.students.length}</p><p>Teachers: ${db.school.teachers.length}</p><p>Elections: ${db.voting.elections.length}</p><p>Vehicles: ${db.cars.vehicles.length}</p><p>Messages: ${db.messages.length}</p>
+ </div></div>`;
+}
+function backup(){
+ const a=document.createElement("a");
+ a.href=URL.createObjectURL(new Blob([JSON.stringify(db,null,2)],{type:"application/json"}));
+ a.download="Kelvin-Portfolio-Backup.json";a.click();
+}
+function restoreBackup(){
+ const file=document.getElementById("backupFile").files[0];
+ if(!file)return notify("Choose a backup file.");
+ const r=new FileReader();
+ r.onload=()=>{
+  try{
+   const data=JSON.parse(r.result);
+   if(!data.profile||!data.school||!data.voting||!data.cars)throw new Error();
+   if(!confirm("Replace current application data with this backup?"))return;
+   db=data;save();notify("Backup restored.");page("home");
+  }catch(e){notify("Invalid backup file.")}
  };
-
- let students=getData("schoolStudents",[]);
-
- if(students.some(s=>String(s.admission).toLowerCase()===student.admission.toLowerCase())){
-  toast("Admission number already exists.");
-  return;
- }
-
- students.push(student);
-
- if(!saveData("schoolStudents",students))return;
-
- e.target.reset();
- renderStudents();
- updateAdminStats();
- toast("Student registered successfully.");
+ r.readAsText(file);
 }
 
-function deleteStudent(admission){
- if(!confirm("Delete this student record?"))return;
-
- let students=getData("schoolStudents",[]).filter(s=>s.admission!==admission);
-
- saveData("schoolStudents",students);
- renderStudents();
- updateAdminStats();
- toast("Student deleted.");
+/* ================= SETTINGS ================= */
+function settingsPage(){
+ document.getElementById("adminContent").innerHTML=
+ heading("System Settings","Manage administrator access and application preferences.")+
+ `<div class="card"><h2>Change Admin Password</h2>
+ <form id="passwordForm">
+ <label>Current password</label><input type="password" name="old" required>
+ <label>New password</label><input type="password" name="next" minlength="8" required>
+ <label>Confirm new password</label><input type="password" name="confirm" minlength="8" required>
+ <button class="btn">Update Password</button>
+ </form></div>
+ <div class="card"><h2>Application Information</h2>
+ <p>Technology: HTML, CSS and JavaScript</p>
+ <p>Storage: Browser localStorage</p>
+ <p>Application: Personal portfolio and three project workspaces</p>
+ <button class="btn danger" onclick="resetSystem()">Reset All Application Data</button>
+ </div>`;
+ document.getElementById("passwordForm").onsubmit=e=>{
+  e.preventDefault();const f=formData(e.target);
+  if(f.old!==db.password)return notify("Current password is incorrect.");
+  if(f.next!==f.confirm)return notify("Passwords do not match.");
+  db.password=f.next;save();log("Changed admin password");notify("Password updated.");
+ };
+}
+function resetSystem(){
+ if(!confirm("Delete ALL application records?"))return;
+ if(!confirm("This cannot be undone. Continue?"))return;
+ localStorage.removeItem(KEY);db=JSON.parse(JSON.stringify(initial));save();page("home");
 }
 
-function renderStudents(){
- const students=getData("schoolStudents",[]);
- const search=($("studentSearch").value||"").toLowerCase();
-
- const filtered=students.filter(s=>
-  s.name.toLowerCase().includes(search)||
-  s.admission.toLowerCase().includes(search)||
-  s.grade.toLowerCase().includes(search)
- );
-
- $("studentTable").innerHTML=filtered.map(s=>`
- <tr>
- <td>${escapeHTML(s.name)}</td>
- <td>${escapeHTML(s.admission)}</td>
- <td>${escapeHTML(s.gender)}</td>
- <td>${escapeHTML(s.grade)}</td>
- <td><button class="btn btn-red" onclick="deleteStudent('${escapeJS(s.admission)}')">Delete</button></td>
- </tr>
- `).join("")||'<tr><td colspan="5">No student records found.</td></tr>';
-
- $("totalStudents").textContent=students.length;
- $("maleStudents").textContent=students.filter(s=>s.gender==="Male").length;
- $("femaleStudents").textContent=students.filter(s=>s.gender==="Female").length;
+/* ================= PUBLIC WEBSITE ================= */
+function renderPublic(){
+ const p=db.profile;
+ document.getElementById("publicName").textContent=p.name;
+ document.getElementById("publicTitle").textContent=p.title;
+ document.getElementById("publicBio").textContent=p.bio;
+ document.getElementById("publicAbout").textContent=p.about;
+ document.getElementById("publicLocation").textContent="Location: "+p.location;
+ document.getElementById("publicEmail").textContent="Email: "+p.email;
+ document.getElementById("publicPhone").textContent="Phone: "+p.phone;
+ document.getElementById("publicPhoto").src=p.photo||"";
+ document.getElementById("publicPhoto").alt=p.name;
+ document.getElementById("whatsappLink").href="https://wa.me/"+p.whatsapp;
+ document.getElementById("cvLink").href=p.cv||"#";
+ document.getElementById("cvLink").style.display=p.cv?"inline-block":"none";
+ document.getElementById("year").textContent=new Date().getFullYear();
+ document.getElementById("publicEducation").innerHTML=db.education.map(x=>`<div class="card"><h3>${safe(x.institution)}</h3><p>${safe(x.course)}</p><small>${safe(x.period)}</small></div>`).join("");
+ document.getElementById("publicExperience").innerHTML=db.experience.map(x=>`<div class="card"><h3>${safe(x.role)}</h3><p>${safe(x.organisation)} · ${safe(x.period)}</p><p>${safe(x.details)}</p></div>`).join("");
+ document.getElementById("publicSkills").innerHTML=db.skills.map(x=>`<div class="card"><b>${safe(x.name)}</b><div class="progress"><span style="width:${Math.min(100,Math.max(0,Number(x.level)||0))}%"></span></div></div>`).join("");
+ document.getElementById("publicProjects").innerHTML=db.projects.map(x=>`<div class="card"><h3>${safe(x.name)}</h3><p>${safe(x.description)}</p><small>Project workspace: ${safe(x.app)}</small></div>`).join("");
+ document.getElementById("publicServices").innerHTML=db.services.map(x=>`<div class="card"><h3>${safe(x.name)}</h3><p>${safe(x.description)}</p></div>`).join("");
 }
-
-// Online Voting System — demonstration only
-const candidates=[
- {id:"c1",name:"Candidate One",party:"Party A",symbol:"🔵"},
- {id:"c2",name:"Candidate Two",party:"Party B",symbol:"🟢"},
- {id:"c3",name:"Candidate Three",party:"Party C",symbol:"🟡"}
-];
-
-function getVotes(){return getData("demoVotes",{})}
-function getVoters(){return getData("demoVoters",[])}
-
-function castVote(candidateID){
- const voter=$("voterID").value.trim();
-
- if(!voter){
-  toast("Enter your demo voter ID.");
-  return;
- }
-
- let voters=getVoters();
-
- if(voters.includes(voter.toLowerCase())){
-  toast("This demo voter ID has already voted.");
-  return;
- }
-
- if(!candidates.some(c=>c.id===candidateID)){
-  toast("Invalid candidate.");
-  return;
- }
-
- let votes=getVotes();
- votes[candidateID]=(votes[candidateID]||0)+1;
- voters.push(voter.toLowerCase());
-
- if(!saveData("demoVotes",votes)||!saveData("demoVoters",voters))return;
-
- $("voterID").value="";
- renderVoting();
- toast("Your demonstration vote has been recorded.");
-}
-
-function renderVoting(){
- const votes=getVotes();
- const total=Object.values(votes).reduce((a,b)=>a+b,0);
-
- $("voteTotal").textContent=total;
- $("candidateTotal").textContent=candidates.length;
-
- $("candidateCards").innerHTML=candidates.map(c=>`
- <div class="card" style="text-align:center">
- <div style="font-size:45px">${c.symbol}</div>
- <h3>${c.name}</h3>
- <p>${c.party}</p>
- <button class="btn" onclick="castVote('${c.id}')">Vote</button>
- </div>
- `).join("");
-
- $("results").innerHTML=candidates.map(c=>{
-  const count=votes[c.id]||0;
-  const percent=total?Math.round(count/total*100):0;
-
-  return `
-  <div class="skill">
-  <div class="skill-label">
-  <b>${c.name}</b>
-  <span>${count} votes (${percent}%)</span>
-  </div>
-  <div class="progress">
-  <div style="width:${percent}%"></div>
-  </div>
-  </div>`;
- }).join("");
-}
-
-// DRIVENEST Motor Cars
-const cars=[
- {id:1,name:"Toyota Mark X",year:2007,price:800000,emoji:"🚘"},
- {id:2,name:"Toyota Land Cruiser V8",year:2015,price:6500000,emoji:"🚙"},
- {id:3,name:"Toyota Prado",year:2018,price:5200000,emoji:"🚙"},
- {id:4,name:"Mazda CX-5",year:2017,price:2300000,emoji:"🚗"},
- {id:5,name:"Toyota Fielder",year:2016,price:1200000,emoji:"🚘"},
- {id:6,name:"Tesla Model S",year:2020,price:8500000,emoji:"🚗"}
-];
-
-function money(value){
- return "KSh "+Number(value).toLocaleString("en-KE");
-}
-
-function renderCars(){
- const search=($("carSearch").value||"").toLowerCase();
-
- const filtered=cars.filter(car=>
-  car.name.toLowerCase().includes(search)||
-  String(car.year).includes(search)
- );
-
- $("carList").innerHTML=filtered.map(car=>`
- <div class="card">
- <div class="car-image">${car.emoji}</div>
- <h3>${car.name}</h3>
- <p>Year: ${car.year}</p>
- <h3 style="color:#6554e8">${money(car.price)}</h3>
- <button class="btn" onclick="addToCart(${car.id})">Add to Enquiry Cart</button>
- </div>
- `).join("")||"<p>No vehicles found.</p>";
-}
-
-function getCart(){return getData("drivenestCart",[])}
-
-function addToCart(id){
- const car=cars.find(c=>c.id===id);
- if(!car)return;
-
- const cart=getCart();
- cart.push(car.id);
-
- saveData("drivenestCart",cart);
- renderCart();
- toast(car.name+" added to enquiry cart.");
-}
-
-function renderCart(){
- const cart=getCart();
- const items=cart.map(id=>cars.find(c=>c.id===id)).filter(Boolean);
- const total=items.reduce((sum,car)=>sum+car.price,0);
-
- $("cartCount").textContent=items.length;
- $("cartTotal").textContent="Total: "+money(total);
-
- $("cartItems").innerHTML=items.map((car,index)=>`
- <p style="padding:9px;border-bottom:1px solid var(--line)">
- ${car.emoji} ${car.name} — ${money(car.price)}
- <button class="btn btn-red" onclick="removeCartItem(${index})">Remove</button>
- </p>
- `).join("")||"<p>Your enquiry cart is empty.</p>";
-}
-
-function removeCartItem(index){
- const cart=getCart();
- cart.splice(index,1);
- saveData("drivenestCart",cart);
- renderCart();
-}
-
-function clearCart(){
- saveData("drivenestCart",[]);
- renderCart();
- toast("Cart cleared.");
-}
-
-function sendCarEnquiry(){
- const cart=getCart();
-
- if(!cart.length){
-  toast("Add a vehicle first.");
-  return;
- }
-
- const selected=cart.map(id=>cars.find(c=>c.id===id)).filter(Boolean);
-
- const body=encodeURIComponent(
-  "Hello DRIVENEST,\nI am interested in these vehicles:\n"+
-  selected.map(c=>c.name+" - "+money(c.price)).join("\n")
- );
-
- window.location.href=
- "mailto:kevohkevz@gmail.com?subject=DRIVENEST%20Vehicle%20Enquiry&body="+body;
-}
-
-// Safe display helpers
-function escapeHTML(value){
- return String(value).replace(/[&<>"']/g,ch=>({
-  "&":"&amp;",
-  "<":"&lt;",
-  ">":"&gt;",
-  '"':"&quot;",
-  "'":"&#39;"
- }[ch]));
-}
-
-function escapeJS(value){
- return String(value).replace(/\\/g,"\\\\").replace(/'/g,"\\'");
-}
-
-// Initial setup
-renderStudents();
-updateAdminStats();
+document.getElementById("contactForm").onsubmit=e=>{
+ e.preventDefault();
+ const f=formData(e.target);
+ db.messages.push({id:id(),...f,date:new Date().toLocaleString()});
+ save();log("Received portfolio contact message");
+ e.target.reset();notify("Your message has been saved.");
+};
+save();
 </script>
 </body>
 </html>
